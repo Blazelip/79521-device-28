@@ -1,12 +1,115 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Девайс</title>
-  </head>
-  <body>
+	<head>
+		<meta charset="utf-8">
+		<meta name="keyowrds" content="Какие-то ключевые слова через запятую">
+		<meta name="description" content="Какое-то описание сайта">   
+		<title>HTML Academy: Девайс</title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<header class="main-header">
+			<h1 class="visually-hidden">Интернет-магазин гаджетов Device</h1>
+			<!-- Есть сомнения по его расположению, так как логотип вероятно должен быть
+			частью навигационного меню и быть в <nav> -->
+			<a href="#"><img src="#" alt="Логотип магазина Device" width="163" height="35"></a>
+			
+			<!-- Знаю, что формы пока размечать не нужно, но эта маленькая, бунтанул маля -->
+			<form action="#" method="GET" name="search-form">
+				<input type="text" placeholder="Поиск по сайту">
+				<button type="submit">Поиск</button>
+			</form>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+			<ul class="user-menu">
+				<li>
+					<a class="login-link" href="#">Войти</a>
+				</li>
+			</ul>
 
-  </body>
+			<!-- Есть большой вопрос, в рациональности использования списка, так как у ссылок неодинаковая функция,
+			однако также можно подумать, что у них одинаковая логика - кнопки для взаимодействия юзера с товарами -->
+			<ul class="product-menu">
+				<li><a href="#">Сравнить</a></li>
+				<li><a href="#">Корзина</a></li>
+			</ul>
+
+			<nav class="main-navigation">
+				<ul class="site-navigation">
+					<li><a href="catalog/catalog.html">Каталог товаров</a></li>
+					<li><a href="#">Доставка</a></li>
+					<li><a href=#>Гарантия</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<section class="about">
+				<h2>О нас</h2>
+
+				<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+				<p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+
+				<ul class="delivery-list">
+					<li>Деловые Линии</li>
+					<li>Автотрейдинг</li>
+					<li>ЖелДорЭкспедиция</li>
+				</ul>
+
+				<a href="#" class="button">Подробнее о нас</a>
+			</section>
+
+			<section class="contacts">
+				<h2>Контакты</h2>
+
+				<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+				
+				<img src="#" alt="Мы на карте" width="560" height="222">
+
+				<a href="#" class="button">Напишите нам</a>
+			</section>
+		</main>
+		
+		<footer class="main-footer">
+			<!-- Долго думал, как верстать футер: блочками в строку или в колонку, выбрал в колонку -->
+			<div class="ft-column1">
+				<img src="#" alt="Логотип магазина Device" width="163" height="35">
+				<address>г. Москва, ул. Строителей, 15</address>
+				<!-- Здесь должна быть желтая линия, скорее всего она будет через CSS -->
+			</div>
+
+			<div class="ft-column2">
+				<ul class="footer-navigation">
+					<li><a href="#">Доставка</a></li>
+					<li><a href="#">Гарантия</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+
+				<ul class="socials">
+					<li><a href="#">Фейсбук</a></li>
+					<li><a href="#">Инстаграм</a></li>
+					<li><a href="#">Твиттер</a></li>
+				</ul>
+			</div>
+
+			<div class="ft-column3">
+				<ul class="ft-user-menu">
+					<li>
+						<a class="ft-login-link" href="#">Войти</a>
+					</li>
+				</ul>
+
+				<ul class="ft-product-menu">
+					<li><a href="#">Сравнить</a></li>
+					<li><a href="#">Корзина</a></li>
+				</ul>
+
+				<p class="telephone">Тел.: +7 (495) 495-95-95</p>
+
+				<a class="copyright" href="#">
+					<img src="#" alt="Логотип HTML Academy" width="" height="">
+				</a>
+			</div>
+		</footer>
+	</body>
 </html>
