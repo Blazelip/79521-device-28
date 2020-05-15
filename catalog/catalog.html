@@ -110,21 +110,20 @@
 			<section class="order-list">		
 				<h2 class="visually-hidden">Каталог доступных товаров</h2>
 
-				<!-- Не придумал, во что оборачивать все параметры сортировки-->
-				<!-- Также есть вопрос: вся сортировка больше похожа на форму с методом GET, так как обычно после нажатия 
-				сортировки в строку URL дописываются параметры поиска  -->
-				<p class="sorting-text">Сортировка</p>
+				<div class="sorting-block">
+					<p class="sorting-text">Сортировка</p>
 
-				<ul class="sorting-parametres">
-					<li><a href="#">По цене</a></li>
-					<li><a href="#">По типу</a></li>
-					<li><a href="#">По популярности</a></li>
-				</ul>
+					<ul class="sorting-parametres">
+						<li><a href="#">По цене</a></li>
+						<li><a href="#">По типу</a></li>
+						<li><a href="#">По популярности</a></li>
+					</ul>
 
-				<ul class="sorting-type">
-					<li><a href="#">По возрастанию</a></li>
-					<li><a href="#">По убыванию</a></li>
-				</ul>
+					<ul class="sorting-type">
+						<li><a href="#">По возрастанию</a></li>
+						<li><a href="#">По убыванию</a></li>
+					</ul>
+				</div>
 
 				<!-- Есть сомнения, внутри <li> должны быть <article>/нет (просто <li>), вроде как каждый товар можно использовать
 					вне, кинув ссылку другому пользователю, поэтому сделал <article>  -->
