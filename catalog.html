@@ -9,25 +9,16 @@
 	</head>
 	<body>
 		<header class="main-header">
-
-			<!-- Есть сомнения по его расположению, так как логотип вероятно должен быть
-			частью навигационного меню и быть в <nav> -->
-			<a href="#"><img src="#" alt="Логотип магазина Device" width="" height=""></a>
+			<a href="index.html"><img src="#" alt="Логотип магазина Device" width="163" height="35"></a>
 			
-			<!-- Знаю, что формы пока размечать не нужно, но эта маленькая, бунтанул маля -->
-			<form action="#" method="GET" name="search-form">
+			<form action="https://echo.htmlacademy.ru/" method="GET" name="search-form">
 				<input type="text" placeholder="Поиск по сайту">
-				<button type="submit">Поиск</button>
 			</form>
 
-			<ul class="user-menu">
-				<li>
-					<a class="login-link" href="#">Войти</a>
-				</li>
-			</ul>
+			<div class="user-menu">
+				<a class="login-link" href="#">Войти</a>
+			</div>
 
-			<!-- Есть большой вопрос, в рациональности использования списка, так как у ссылок неодинаковая функция,
-			однако также можно подумать, что у них одинаковая логика - кнопки для взаимодействия юзера с товарами -->
 			<div class="product-menu">
 				<a href="#">Сравнить</a>
 				<a href="#">Корзина</a>
@@ -35,7 +26,7 @@
 
 			<nav class="main-navigation">
 				<ul class="site-navigation">
-					<li><a href="catalog/catalog.html">Каталог товаров</a></li>
+					<li><a href="catalog.html">Каталог товаров</a></li>
 					<li><a href="#">Доставка</a></li>
 					<li><a href=#>Гарантия</a></li>
 					<li><a href="#">Контакты</a></li>
@@ -98,7 +89,7 @@
 						<input type="radio" name="bluetooth" value="yes" id="bt-on" checked>
 						<label for="bt-on">Есть</label>
 
-						<input type="radio" name="bluetooth" value="no" "id="bt-off">
+						<input type="radio" name="bluetooth" value="no" id="bt-off">
 						<label for="bt-off">Нет</label>
 					</fieldset>
 
@@ -124,8 +115,6 @@
 					</ul>
 				</div>
 
-				<!-- Есть сомнения, внутри <li> должны быть <article>/нет (просто <li>), вроде как каждый товар можно использовать
-					вне, кинув ссылку другому пользователю, поэтому сделал <article>  -->
 				<ul class="goods-list">
 					<li>
 						<article>
@@ -134,7 +123,7 @@
 							</a>
 
 							<p class="product-title">Любительская селфи-палка</p>
-							<p class="product-price">500 руб.</span>										
+							<p class="product-price">500 руб.</p>										
 						</article>
 					</li>
 					<li>
@@ -144,7 +133,7 @@
 							</a>
 
 							<p class="product-title">Профессиональная селфи-палка</p>
-							<p class="product-price">1 500 руб.</span>
+							<p class="product-price">1 500 руб.</p>
 						</article>
 					</li>
 					<li>
@@ -154,7 +143,7 @@
 							</a>
 
 							<p class="product-title">Непотопляемая селфи-палка</p>
-							<p class="product-price">2 500 руб.</span>
+							<p class="product-price">2 500 руб.</p>
 						</article>
 					</li>
 					<li>
@@ -164,13 +153,11 @@
 							</a>
 
 							<p class="product-title">Селфи-палка «Следуй за мной»</p>
-							<p class="product-price">4 900 руб.</span>
+							<p class="product-price">4 900 руб.</p>
 						</article>
 					</li>
 				</ul>
 
-				<!-- Тут хочу спросить совета, как быть, у меня по идее на первой странице не должен быть 
-				активным пункт "Назад" и 1-ая страница, я им у ссылок убрал href, так верно? -->
 				<ul class="page-counter">
 					<li><a>Назад</a></li>
 					<li class="page-current"><a>1</a></li>
@@ -182,9 +169,8 @@
 		</main>
 		
 		<footer class="main-footer">
-			<!-- Долго думал, как верстать футер: блочками в строку или в колонку, выбрал в колонку -->
 			<div class="ft-column1">
-				<img src="#" alt="Логотип магазина Device" width="" height="">
+				<img src="#" alt="Логотип магазина Device" width="163" height="35">
 				<address>г. Москва, ул. Строителей, 15</address>
 				<!-- Здесь должна быть желтая линия, скорее всего она будет через CSS -->
 			</div>
@@ -204,11 +190,9 @@
 			</div>
 
 			<div class="ft-column3">
-				<ul class="ft-user-menu">
-					<li>
-						<a class="ft-login-link" href="#">Войти</a>
-					</li>
-				</ul>
+				<div class="ft-user-menu">
+					<a class="ft-login-link" href="#">Войти</a>
+				</div>
 
 				<div class="ft-product-menu">
 					<a href="#">Сравнить</a>
@@ -217,7 +201,7 @@
 
 				<a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
 
-				<a class="copyright" href="#">
+				<a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss">
 					<img src="#" alt="Логотип HTML Academy" width="27" height="34">
 				</a>
 			</div>
