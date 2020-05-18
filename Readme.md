@@ -1,6 +1,6 @@
 # Личный проект «Девайс»
 
-* Студент: [Дмитрий Филюков](https://up.htmlacademy.ru/htmlcss/28/user/79521).
+* Студент: [Дмитрий Филюков](https://up.htmlacademy.ru/htmlcss/28/user/79521). - Идиот
 * Наставник: [Федор Базанов](https://htmlacademy.ru/profile/id483955).
 🌚🌚🌚🌚🌚🌚🌚🌚🌚🌚🌚🌚
 
