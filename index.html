@@ -16,7 +16,8 @@
 			</svg>
 			
 			<form action="https://echo.htmlacademy.ru/" method="GET">
-				<input type="search" name="search" placeholder="Поиск по сайту">
+				<label for="search-field">Поиск по сайту</label>
+				<input type="search" name="search" id="search-field" placeholder="Поиск по сайту">
 			</form>
 
 			<div class="user-menu">
@@ -137,13 +138,13 @@
 
 				<ul class="slider-switcher">
 					<li>
-						<button type="button">Перейти к первому слайду</button>
+						<button type="button" aria-label="Перейти к первому слайду"></button>
 					</li>
 					<li>
-						<button type="button">Перейти ко второму слайду</button>
+						<button type="button" aria-label="Перейти ко второму слайду"></button>
 					</li>
 					<li>
-						<button type="button">Перейти к третьему слайду</button>
+						<button type="button" aria-label="Перейти к третьему слайду"></button>
 					</li>
 				</ul>
 			</section>
@@ -338,7 +339,7 @@
 		</footer>
 
 		<section class="feedback">
-			<h2 class="visually-hidden">Форма обратной связи</h2>
+			<h3 class="visually-hidden">Форма обратной связи</h3>
 			<form action="https://echo.htmlacademy.ru" method="POST">
 				<p>
 					<label for="name-field">Ваше имя:</label>
@@ -359,8 +360,8 @@
 		</section>
 
 		<section class="map">
-			<h2 class="visually-hidden">Мы на карте</h2>
-			<img src="img/map-big.png" alt="Местоположение на карте" width="994" height="593">
+			<h3 class="visually-hidden">Мы на карте</h3>
+			<img src="img/map-big.png" alt="г. Москва, ул. Строителей, 15" width="994" height="593">
 			<button class="close-cross" type="button">Закрыть карту</button>
 		</section>
 	</body>
