@@ -36,3 +36,20 @@
          url("../fonts/gilroyextrabold.woff") format("woff");
 }
 
+/* Custom properties */
+
+:root {
+    --basic-black: #000000;
+    --basic-dark: #363636;
+    --basic-grey: #464646;
+    --basic-half-grey: #7E7E7E;;
+    --basic-light-grey: #E5E5E5;
+    --basic-white: #FFFFFF;
+
+    --special-yellow-dark: #F0C52E;
+    --special-yellow-light: #F7E296;
+    --special-green: #91C92F;
+
+    --pink-: #F6DADA;
+}
+
