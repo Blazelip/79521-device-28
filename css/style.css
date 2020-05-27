@@ -53,3 +53,303 @@
     --pink-: #F6DADA;
 }
 
+/* INDEX - Site properties */
+
+body {
+    min-width: 1160px;
+    margin: 0;
+    padding: 0 40px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 20px;
+    color: var(--basic-black);
+}
+
+a {
+    text-decoration: none;
+}
+
+.button {
+    font-family: "Gilroy", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--basic-black);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* Header */
+
+input[type="search"] {
+    font: inherit;
+    background-color: transparent;
+}
+
+.site-navigation {
+    list-style: none;
+}
+
+.main-header {
+    background-color: var(--special-yellow-light);
+}
+
+.main-header a {
+    color: var(--basic-black);
+}
+
+.main-header a:hover,
+.main-header a:focus {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.main-header a:active {
+    color: rgba(0, 0, 0, 0.3);
+} 
+
+.main-navigation a,
+.footer-navigation a {
+    font-family: "Gilroy", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.catalog-menu a {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 20px;
+    text-transform: none;
+}
+
+/* INDEX - About & Contacts */
+
+.about h2,
+.contacts h2 {
+    font-family: "Gilroy", sans-serif;
+    font-weight: 800;
+    font-size: 47px;
+    line-height: 58px;
+    letter-spacing: 0.2em;
+}
+
+.about p,
+.contacts p {
+    line-height: 28px;
+}
+
+.delivery-list {
+    list-style: none;
+    font-family: "Gilroy", sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+/* Footer */
+
+.main-footer {
+    background-color: var(--basic-dark);
+    color: var(--basic-white);
+}
+
+.main-footer a {
+    color: var(--basic-white);
+}
+
+.main-footer address {
+    font-style: normal;
+}
+
+.footer-navigation,
+.socials {
+    list-style: none;
+}
+
+.footer-navigation a:hover,
+.footer-navigation a:focus {
+    color: rgba(255,255,255, 0.6)
+}
+
+.footer-navigation a:active {
+    color: rgba(255,255,255, 0.3)
+}
+
+.ft-product-menu a,
+.ft-user-menu a {
+    color: rgba(255,255,255, 0.7)
+}
+
+.ft-user-menu a:hover,
+.ft-user-menu a:focus,
+.ft-product-menu a:hover,
+.ft-product-menu a:focus {
+    color: rgb(255, 255, 255)
+}
+
+.ft-user-menu a:active,
+.ft-product-menu a:active {
+    color: rgba(255,255,255, 0.3)
+}
+
+.copyright:hover,
+.copyright:focus {
+    opacity: 0.6;
+}
+
+.copyright:active {
+    opacity: 0.3;
+}
+
+
+/* PopUp windows */
+
+.feedback,
+.map {
+    display: none;
+}
+
+/* CATALOG - Site properties */
+
+/* Header */
+
+/*  Есть вопрос , как правильно задавать интерактивность для логотипов(изображений в ссылках), по идее
+мы задаем псевдоклассны состояния для ссылок, но кому писать opacity, ведь визуально будет одинаково, 
+если я напишу для ссылки или для изображения, иными словами как правильнее должен
+выглядеть селектор .logo:hover {opacity: 0.6;} или .logo:hover img {opacity: 0.6;} */
+.logo:hover,
+.logo:focus {
+    opacity: 0.6;
+}
+
+.logo:active {
+    opacity: 0.3;
+}
+
+.user-menu .logout-link {
+    color: rgba(0, 0, 0, 0.3)
+}
+
+.breadcrumbs {
+    list-style: none;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.breadcrumbs a {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+    color: rgba(0, 0, 0, 0.6)
+}
+
+.breadcrumbs a:active {
+    color: rgba(0, 0, 0, 0.1)
+}
+
+/* Filters */
+
+.filters fieldset {
+    border: 0;
+}
+
+.filters legend {
+    font-family: "Gilroy", sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.1em;
+}
+
+.filters {
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.form-range__label {
+    line-height: 16px;
+}
+
+/* Похоже я творю какую-то дичь с интерактивностью фильтров */
+
+.filters input[type="checkbox"]:checked:hover,
+.filters input[type="checkbox"]:checked:focus {
+    opacity: 0.6;
+}
+
+.filters input[type="checkbox"]:disabled {
+    opacity: 0.25;
+}
+
+.filters input[type="checkbox"]:disabled + label {
+    color: #A6A6A6;
+}
+
+.filters input[type="radio"]:hover,
+.filters input[type="radio"]:focus {
+    opacity: 0.6;
+}
+
+.filters input[type="radio"]:disabled {
+    opacity: 0.25;
+}
+
+.filters input[type="radio"]:disabled + label {
+    color: #A6A6A6;
+}
+/* Goods list */
+
+.goods-list {
+    list-style: none;
+}
+
+/* Вот тут тоже нужно тщательное ревью, кажется, что я нагородил с появляющимся блоком */
+.blink {
+    display: none;
+}
+
+.goods-list li:hover .blink {
+    display: block;
+}
+
+.blink button {
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+    border: none;
+    background-color: transparent;
+    opacity: 0.5;
+}
+
+.blink button:hover,
+.blink button:focus {
+    opacity: 1;
+}
+
+.blink button:active {
+    opacity: 0.2;
+}
+
+.product-title {
+    font-family: "Gilroy", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.05em; 
+}
+
+.product-price {
+    font-family: "Gilroy", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+}
