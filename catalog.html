@@ -5,11 +5,12 @@
 		<meta name="keyowrds" content="Какие-то ключевые слова через запятую">
 		<meta name="description" content="Какое-то описание сайта">   
 		<title>HTML Academy: Девайс</title>
+		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
-	<body>
+	<body class="catalog-page">
 		<header class="main-header">
-			<a href="index.html" aria-label="Перейти на главную страницу">
+			<a class="logo" href="index.html" aria-label="Перейти на главную страницу">
 				<img src="img/logo.svg" width="163" height="35" alt="Логотип магазина Device">
 			</a>
 			
@@ -123,7 +124,7 @@
 						</p>
 
 						<p>
-							<input type="checkbox" name="product-pink" id="pc-pink">
+							<input type="checkbox" name="product-pink" id="pc-pink" disabled>
 							<label for="pc-pink">Розовый</label>
 						</p>
 					</fieldset>
@@ -131,7 +132,7 @@
 					<fieldset>
 						<legend>Bluetooth</legend>
 
-						<input type="radio" name="bluetooth" value="yes" id="bt-on" checked>
+						<input type="radio" name="bluetooth" value="yes" id="bt-on" checked disabled>
 						<label for="bt-on">Есть</label>
 
 						<input type="radio" name="bluetooth" value="no" id="bt-off">
@@ -255,7 +256,7 @@
 		
 		<footer class="main-footer">
 			<div class="ft-column1">
-				<a href="index.html" aria-label="Перейти на главную страницу">
+				<a class="logo" href="index.html" aria-label="Перейти на главную страницу">
 					<img src="img/logo.svg" width="163" height="35" alt="Логотип магазина Device">
 				</a>
 				<address>г. Москва, ул. Строителей, 15</address>
