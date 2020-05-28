@@ -51,6 +51,10 @@
     --special-green: #91C92F;
 
     --pink-: #F6DADA;
+    --disabled-grey: #A6A6A6;
+
+    --hover-opacity: 0.6;
+    --active-opacity: 0.3;
 }
 
 /* INDEX - Site properties */
@@ -59,7 +63,7 @@ body {
     min-width: 1160px;
     margin: 0;
     padding: 0 40px;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 15px;
@@ -72,7 +76,7 @@ a {
 }
 
 .button {
-    font-family: "Gilroy", sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-weight: 800;
     font-size: 18px;
     line-height: 22px;
@@ -84,9 +88,22 @@ a {
 
 /* Header */
 
-input[type="search"] {
-    font: inherit;
+.search-field {
+    border: 0;
     background-color: transparent;
+    line-height: 20px;
+    opacity: 0.3;
+    font-weight: 300;
+    color: var(--basic-black);
+}
+
+/* Стилизация placeholder по-прежнему не работает, нужно ревью */
+.search-field:hover::placeholder {
+    opacity: 1;
+}
+
+.search-field:focus::placeholder {
+    opacity: 1;
 }
 
 .site-navigation {
@@ -103,16 +120,16 @@ input[type="search"] {
 
 .main-header a:hover,
 .main-header a:focus {
-    color: rgba(0, 0, 0, 0.6);
+    opacity: var(--hover-opacity);
 }
 
 .main-header a:active {
-    color: rgba(0, 0, 0, 0.3);
+    opacity: var(--active-opacity);
 } 
 
 .main-navigation a,
 .footer-navigation a {
-    font-family: "Gilroy", sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-weight: 800;
     font-size: 18px;
     line-height: 22px;
@@ -121,7 +138,7 @@ input[type="search"] {
 }
 
 .catalog-menu a {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-weight: 300;
     font-size: 15px;
     line-height: 20px;
@@ -132,7 +149,7 @@ input[type="search"] {
 
 .about h2,
 .contacts h2 {
-    font-family: "Gilroy", sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-weight: 800;
     font-size: 47px;
     line-height: 58px;
@@ -146,7 +163,7 @@ input[type="search"] {
 
 .delivery-list {
     list-style: none;
-    font-family: "Gilroy", sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-weight: 800;
     font-size: 16px;
     line-height: 28px;
@@ -174,37 +191,37 @@ input[type="search"] {
 
 .footer-navigation a:hover,
 .footer-navigation a:focus {
-    color: rgba(255,255,255, 0.6)
+    opacity: var(--hover-opacity);
 }
 
 .footer-navigation a:active {
-    color: rgba(255,255,255, 0.3)
+    opacity: var(--active-opacity);
 }
 
-.ft-product-menu a,
-.ft-user-menu a {
-    color: rgba(255,255,255, 0.7)
+.footer-product-menu a,
+.footer-user-menu a {
+    opacity: 0.7;
 }
 
-.ft-user-menu a:hover,
-.ft-user-menu a:focus,
-.ft-product-menu a:hover,
-.ft-product-menu a:focus {
-    color: rgb(255, 255, 255)
+.footer-user-menu a:hover,
+.footer-user-menu a:focus,
+.footer-product-menu a:hover,
+.footer-product-menu a:focus {
+    opacity: 1;
 }
 
-.ft-user-menu a:active,
-.ft-product-menu a:active {
-    color: rgba(255,255,255, 0.3)
+.footer-user-menu a:active,
+.footer-product-menu a:active {
+    opacity: var(--active-opacity);
 }
 
 .copyright:hover,
 .copyright:focus {
-    opacity: 0.6;
+    opacity: var(--hover-opacity);
 }
 
 .copyright:active {
-    opacity: 0.3;
+    opacity: var(--active-opacity);
 }
 
 
@@ -219,21 +236,18 @@ input[type="search"] {
 
 /* Header */
 
-/*  Есть вопрос , как правильно задавать интерактивность для логотипов(изображений в ссылках), по идее
-мы задаем псевдоклассны состояния для ссылок, но кому писать opacity, ведь визуально будет одинаково, 
-если я напишу для ссылки или для изображения, иными словами как правильнее должен
-выглядеть селектор .logo:hover {opacity: 0.6;} или .logo:hover img {opacity: 0.6;} */
 .logo:hover,
 .logo:focus {
-    opacity: 0.6;
+    opacity: var(--hover-opacity);
 }
 
 .logo:active {
-    opacity: 0.3;
+    opacity: var(--active-opacity);
 }
 
 .user-menu .logout-link {
-    color: rgba(0, 0, 0, 0.3)
+    color: var(--basic-black);
+    opacity: 0.3;
 }
 
 .breadcrumbs {
@@ -243,16 +257,24 @@ input[type="search"] {
 }
 
 .breadcrumbs a {
-    color: rgba(0, 0, 0, 0.3);
+    color: var(--basic-black);
+    opacity: 0.3;
 }
 
 .breadcrumbs a:hover,
 .breadcrumbs a:focus {
-    color: rgba(0, 0, 0, 0.6)
+    opacity: var(--hover-opacity);
 }
 
 .breadcrumbs a:active {
-    color: rgba(0, 0, 0, 0.1)
+    opacity: 0.1;
+}
+
+.catalog-page h1 {
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: 800;
+    font-size: 47px;
+    line-height: 58px;
 }
 
 /* Filters */
@@ -262,7 +284,7 @@ input[type="search"] {
 }
 
 .filters legend {
-    font-family: "Gilroy", sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-weight: 800;
     font-size: 14px;
     line-height: 17px;
@@ -280,30 +302,48 @@ input[type="search"] {
 
 /* Похоже я творю какую-то дичь с интерактивностью фильтров */
 
-.filters input[type="checkbox"]:checked:hover,
-.filters input[type="checkbox"]:checked:focus {
+.checkbox-input:hover,
+.checkbox-input:focus {
     opacity: 0.6;
 }
 
-.filters input[type="checkbox"]:disabled {
-    opacity: 0.25;
-}
-
-.filters input[type="checkbox"]:disabled + label {
-    color: #A6A6A6;
-}
-
-.filters input[type="radio"]:hover,
-.filters input[type="radio"]:focus {
+.checkbox-input:checked:hover,
+.checkbox-input:checked:focus {
     opacity: 0.6;
 }
 
-.filters input[type="radio"]:disabled {
+.checkbox-input:disabled {
     opacity: 0.25;
 }
 
-.filters input[type="radio"]:disabled + label {
-    color: #A6A6A6;
+.checkbox-input:disabled:checked {
+    opacity: 0.25;
+}
+
+.checkbox-input:disabled + label {
+    color: var(--disabled-grey);
+}
+
+.radio-input:hover,
+.radio-input:focus {
+    opacity: 0.6;
+}
+
+.radio-input:checked:hover,
+.radio-input:checked:focus {
+    opacity: 0.6;
+}
+
+.radio-input:disabled {
+    opacity: 0.25;
+}
+
+.radio-input:disabled:checked {
+    opacity: 0.25;
+}
+
+.radio-input:disabled + label {
+    color: var(--disabled-grey);
 }
 /* Goods list */
 
@@ -312,15 +352,15 @@ input[type="search"] {
 }
 
 /* Вот тут тоже нужно тщательное ревью, кажется, что я нагородил с появляющимся блоком */
-.blink {
+.product-controls {
     display: none;
 }
 
-.goods-list li:hover .blink {
+.product-item:hover .product-controls {
     display: block;
 }
 
-.blink button {
+.product-controls button {
     font-size: 13px;
     line-height: 18px;
     letter-spacing: 0.1em;
@@ -329,17 +369,17 @@ input[type="search"] {
     opacity: 0.5;
 }
 
-.blink button:hover,
-.blink button:focus {
+.product-controls button:hover,
+.product-controls button:focus {
     opacity: 1;
 }
 
-.blink button:active {
+.product-controls button:active {
     opacity: 0.2;
 }
 
 .product-title {
-    font-family: "Gilroy", sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-weight: 800;
     font-size: 18px;
     line-height: 22px;
@@ -347,7 +387,7 @@ input[type="search"] {
 }
 
 .product-price {
-    font-family: "Gilroy", sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-weight: 300;
     font-size: 16px;
     line-height: 18px;
