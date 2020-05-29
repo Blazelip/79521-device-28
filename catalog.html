@@ -140,7 +140,7 @@
 						<label for="bt-off">Нет</label>
 					</fieldset>
 
-					<button class="button" type="submit">Показать</button>
+					<button class="button button-filter" type="submit">Показать</button>
 				</form>
 			</section>
 
@@ -152,7 +152,7 @@
 
 					<ul class="sorting-parametres">
 						<li>
-							<a href="#">По цене</a>
+							<a href="#" class="sorting-current">По цене</a>
 						</li>
 						<li>
 							<a href="#">По типу</a>
@@ -167,7 +167,7 @@
 							<a href="#">По возрастанию</a>
 						</li>
 						<li>
-							<a href="#">По убыванию</a>
+							<a href="#" class="sorting-current">По убыванию</a>
 						</li>
 					</ul>
 				</div>
@@ -184,7 +184,7 @@
 							
 							<div class="product-controls">
 								<a href="#" class="button">В корзину</a>
-								<button type="button">Добавить к сравнению</button>
+								<button class="button-add-comparing" type="button">Добавить к сравнению</button>
 							</div>
 						</article>
 					</li>
@@ -199,7 +199,7 @@
 
 							<div class="product-controls">
 								<a href="#" class="button">В корзину</a>
-								<button type="button">Добавить к сравнению</button>
+								<button class="button-add-comparing" type="button">Добавить к сравнению</button>
 							</div>
 						</article>
 					</li>
@@ -214,7 +214,7 @@
 
 							<div class="product-controls">
 								<a href="#" class="button">В корзину</a>
-								<button type="button">Добавить к сравнению</button>
+								<button class="button-add-comparing" type="button">Добавить к сравнению</button>
 							</div>
 						</article>
 					</li>
@@ -229,7 +229,7 @@
 
 							<div class="product-controls">
 								<a href="#" class="button">В корзину</a>
-								<button type="button">Добавить к сравнению</button>
+								<button class="button-add-comparing" type="button">Добавить к сравнению</button>
 							</div>
 						</article>
 					</li>
@@ -237,19 +237,19 @@
 
 				<ul class="page-counter">
 					<li>
-						<a>Назад</a>
-					</li>
-					<li class="page-current">
-						<a>1</a>
+						<a class="page-text-switcher">Назад</a>
 					</li>
 					<li>
-						<a href="#">2</a>
+						<a class="page-number-switcher page-current">1</a>
 					</li>
 					<li>
-						<a href="#">3</a>
+						<a class="page-number-switcher" href="#">2</a>
 					</li>
 					<li>
-						<a href="#">Вперед</a>
+						<a class="page-number-switcher" href="#">3</a>
+					</li>
+					<li>
+						<a class="page-text-switcher" href="#">Вперед</a>
 					</li>
 				</ul>
 			</section>

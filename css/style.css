@@ -42,7 +42,7 @@
     --basic-black: #000000;
     --basic-dark: #363636;
     --basic-grey: #464646;
-    --basic-half-grey: #7E7E7E;;
+    --basic-half-grey: #7E7E7E;
     --basic-light-grey: #E5E5E5;
     --basic-white: #FFFFFF;
 
@@ -52,12 +52,15 @@
 
     --pink-: #F6DADA;
     --disabled-grey: #A6A6A6;
+    --switcher-grey: #D9D9D9;
+    --counter-background: #EBEBEB;
+    --filters-background: #DCDCDC;
 
     --opacity-hover: 0.6;
     --opacity-active: 0.3;
 }
 
-/* INDEX - Site properties */
+/* GLOBAL - Site properties */
 
 body {
     min-width: 1160px;
@@ -86,7 +89,9 @@ a {
     text-align: center;
 }
 
-/* Header */
+/* INDEX - Site properties */
+
+/* HEADER - */
 
 .search-field {
     border: 0;
@@ -97,7 +102,9 @@ a {
     color: var(--basic-black);
 }
 
-/* Стилизация placeholder по-прежнему не работает, нужно ревью */
+/* Search Input */
+
+/* Стилизация placeholder требует перепроверки */
 .search-field::placeholder{
     opacity: 0.3;
 }
@@ -149,10 +156,90 @@ a {
     text-transform: none;
 }
 
+/* INDEX - Slider */
+
+.slider-products {
+    list-style: none;
+}
+
+.product-slogan {
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: 800;
+    font-size: 47px;
+    line-height: 58px;
+}
+
+.product-features th {
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 0.1em;
+}
+
+.product-features td {
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+}
+
+.slider-switcher {
+    list-style: none;
+}
+
+/* INDEX - Categories */
+
+.categories-list {
+    list-style: none;
+}
+
+.category-item {
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--basic-black);
+}
+
+/*  Проверь пожалуйста тут состояние, чет не отрабатывает
+возможно, он без ховера не активит, но хз*/
+.category-item:active {
+    opacity: var(--opacity-active);
+}
+
+/* INDEX - Services */
+
+.services-list-buttons {
+    list-style: none;
+}
+
+.button-service {
+    border: 0;
+    background-color: transparent;
+}
+
+.service-list {
+    list-style: none;
+}
+
+
+.service-description {
+    line-height: 28px;
+    letter-spacing: 0.1em;
+}
+
+/* INDEX - Popular Brands */
+
+.brand-list {
+    list-style: none;
+}
+
 /* INDEX - About & Contacts */
 
 .about h2,
-.contacts h2 {
+.contacts h2,
+.service-name {
     font-family: "Gilroy", "Arial", sans-serif;
     font-weight: 800;
     font-size: 47px;
@@ -173,7 +260,7 @@ a {
     line-height: 28px;
 }
 
-/* Footer */
+/* FOOTER */
 
 .main-footer {
     background-color: var(--basic-dark);
@@ -229,7 +316,7 @@ a {
 }
 
 
-/* PopUp windows */
+/* INDEX - PopUp windows */
 
 .feedback,
 .map {
@@ -238,7 +325,7 @@ a {
 
 /* CATALOG - Site properties */
 
-/* Header */
+/* CATALOG - Header */
 
 .logo:hover,
 .logo:focus {
@@ -252,6 +339,15 @@ a {
 .user-menu .logout-link {
     color: var(--basic-black);
     opacity: 0.3;
+}
+
+/* CATALOG - Title & Breadcrumbs */
+
+.catalog-main-title {
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: 800;
+    font-size: 47px;
+    line-height: 58px;
 }
 
 .breadcrumbs {
@@ -274,14 +370,7 @@ a {
     opacity: 0.1;
 }
 
-.catalog-main-title {
-    font-family: "Gilroy", "Arial", sans-serif;
-    font-weight: 800;
-    font-size: 47px;
-    line-height: 58px;
-}
-
-/* Filters */
+/* CATALOG - Filters */
 
 .filters fieldset {
     border: 0;
@@ -296,12 +385,35 @@ a {
 }
 
 .filters {
+    background-color: var(--basic-light-grey);
     font-size: 14px;
     line-height: 19px;
 }
 
+.filters h2 {
+    background-color: var(--filters-background);
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
 .form-range__label {
+    font-family: "Gilroy", "Arial", sans-serif;
     line-height: 16px;
+}
+
+.form-range__input {
+    background-color: transparent;
+    border: none;
+}
+
+.form-range__input::-webkit-inner-spin-button, 
+.form-range__input::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
 }
 
 .checkbox-input:hover,
@@ -312,6 +424,10 @@ a {
 .checkbox-input:checked:hover,
 .checkbox-input:checked:focus {
     opacity: 0.6;
+}
+
+.checkbox-input:checked:active {
+    opacity: 1;
 }
 
 .checkbox-input:disabled {
@@ -336,6 +452,10 @@ a {
     opacity: 0.6;
 }
 
+.radio-input:checked:active {
+    opacity: 1;
+}
+
 .radio-input:disabled {
     opacity: 0.25;
 }
@@ -347,13 +467,63 @@ a {
 .radio-input:disabled + label {
     color: var(--disabled-grey);
 }
-/* Goods list */
 
-.goods-list {
+.button-filter {
+    border: 0;
+    background-color: transparent;
+}
+
+/* CATALOG - Sorting filters */
+
+.sorting-block {
+    background-color: var(--basic-light-grey);
+}
+
+.sorting-block a {
+    color: var(--basic-black);
+}
+
+.sorting-block a:not(.sorting-current) {
+    opacity: 0.3;
+}
+
+.sorting-current {
+    opacity: 1;
+}
+
+.sorting-block a:hover,
+.sorting-block a:focus {
+    opacity: var(--opacity-hover);
+}
+
+.sorting-block a:active {
+    opacity: 1;
+}
+
+.sorting-text {
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;    
+}
+
+.sorting-parametres {
+    list-style: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.sorting-type {
     list-style: none;
 }
 
-/* Вот тут тоже нужно тщательное ревью, кажется, что я нагородил с появляющимся блоком */
+/* CATALOG - Goods-list */
+
+/* Hover block */
+
 .product-controls {
     display: none;
 }
@@ -362,7 +532,7 @@ a {
     display: block;
 }
 
-.product-controls button {
+.button-add-comparing {
     font-size: 13px;
     line-height: 18px;
     letter-spacing: 0.1em;
@@ -371,13 +541,19 @@ a {
     opacity: 0.5;
 }
 
-.product-controls button:hover,
-.product-controls button:focus {
+.button-add-comparing:hover,
+.button-add-comparing:focus {
     opacity: 1;
 }
 
-.product-controls button:active {
+.button-add-comparing:active {
     opacity: 0.2;
+}
+
+/* Goods-list */
+
+.goods-list {
+    list-style: none;
 }
 
 .product-title {
@@ -394,4 +570,44 @@ a {
     font-size: 16px;
     line-height: 18px;
     letter-spacing: 0.05em;
+}
+
+
+/* Page Counter */
+
+.page-counter {
+    list-style: none;
+    background-color: var(--counter-background);
+}
+
+.page-counter a {
+    color: var(--basic-black);
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.page-number-switcher:not(.page-current) {
+    opacity: 0.3;
+}
+
+.page-number-switcher:hover:not(.page-current),
+.page-number-switcher:focus:not(.page-current) {
+    opacity: 0.6;
+}
+
+.page-number-switcher:active:not(.page-current) {
+    opacity: 1;
+}
+
+.page-text-switcher:hover,
+.page-text-switcher:focus {
+    background-color: var(--switcher-grey);
+}
+
+.page-text-switcher:active {
+    background-color: var(--switcher-grey);
+    opacity: 0.3;
 }
