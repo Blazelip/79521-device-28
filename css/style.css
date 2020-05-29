@@ -145,10 +145,67 @@ a {
     text-transform: none;
 }
 
+/* INDEX - Slider */
+
+.slider-products {
+    list-style: none;
+}
+
+.product-slogan {
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: 800;
+    font-size: 47px;
+    line-height: 58px;
+}
+
+.product-features th {
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 0.1em;
+}
+
+.product-features td {
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+}
+
+.slider-switcher {
+    list-style: none;
+}
+
+/* INDEX - Categories */
+
+.categories-list {
+    list-style: none;
+}
+
+.category-title {
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+/* INDEX - Services */
+
+.services-list-buttons {
+    list-style: none;
+}
+
+.button-service {
+    border: 0;
+    background-color: transparent;
+}
+
 /* INDEX - About & Contacts */
 
 .about h2,
-.contacts h2 {
+.contacts h2,
+.service-name {
     font-family: "Gilroy", "Arial", sans-serif;
     font-weight: 800;
     font-size: 47px;
