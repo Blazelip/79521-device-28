@@ -53,8 +53,8 @@
     --pink-: #F6DADA;
     --disabled-grey: #A6A6A6;
 
-    --hover-opacity: 0.6;
-    --active-opacity: 0.3;
+    --opacity-hover: 0.6;
+    --opacity-active: 0.3;
 }
 
 /* INDEX - Site properties */
@@ -98,11 +98,15 @@ a {
 }
 
 /* Стилизация placeholder по-прежнему не работает, нужно ревью */
-.search-field:hover::placeholder {
-    opacity: 1;
+.search-field::placeholder{
+    opacity: 0.3;
 }
 
-.search-field:focus::placeholder {
+.search-field:hover::placeholder {
+    opacity: var(--opacity-hover);
+}
+
+.search-field:focus {
     opacity: 1;
 }
 
@@ -120,11 +124,11 @@ a {
 
 .main-header a:hover,
 .main-header a:focus {
-    opacity: var(--hover-opacity);
+    opacity: var(--opacity-hover);
 }
 
 .main-header a:active {
-    opacity: var(--active-opacity);
+    opacity: var(--opacity-active);
 } 
 
 .main-navigation a,
@@ -248,11 +252,11 @@ a {
 
 .footer-navigation a:hover,
 .footer-navigation a:focus {
-    opacity: var(--hover-opacity);
+    opacity: var(--opacity-hover);
 }
 
 .footer-navigation a:active {
-    opacity: var(--active-opacity);
+    opacity: var(--opacity-active);
 }
 
 .footer-product-menu a,
@@ -269,16 +273,16 @@ a {
 
 .footer-user-menu a:active,
 .footer-product-menu a:active {
-    opacity: var(--active-opacity);
+    opacity: var(--opacity-active);
 }
 
 .copyright:hover,
 .copyright:focus {
-    opacity: var(--hover-opacity);
+    opacity: var(--opacity-hover);
 }
 
 .copyright:active {
-    opacity: var(--active-opacity);
+    opacity: var(--opacity-active);
 }
 
 
@@ -295,11 +299,11 @@ a {
 
 .logo:hover,
 .logo:focus {
-    opacity: var(--hover-opacity);
+    opacity: var(--opacity-hover);
 }
 
 .logo:active {
-    opacity: var(--active-opacity);
+    opacity: var(--opacity-active);
 }
 
 .user-menu .logout-link {
@@ -320,14 +324,14 @@ a {
 
 .breadcrumbs a:hover,
 .breadcrumbs a:focus {
-    opacity: var(--hover-opacity);
+    opacity: var(--opacity-hover);
 }
 
 .breadcrumbs a:active {
     opacity: 0.1;
 }
 
-.catalog-page h1 {
+.catalog-main-title {
     font-family: "Gilroy", "Arial", sans-serif;
     font-weight: 800;
     font-size: 47px;
@@ -356,8 +360,6 @@ a {
 .form-range__label {
     line-height: 16px;
 }
-
-/* Похоже я творю какую-то дичь с интерактивностью фильтров */
 
 .checkbox-input:hover,
 .checkbox-input:focus {
