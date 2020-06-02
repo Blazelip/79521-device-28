@@ -101,9 +101,19 @@ button {
     text-align: center;
 }
 
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
 /* INDEX - Site properties */
 
 /* HEADER - */
+
+/* Search Input */
 
 .search-field {
     border: 0;
@@ -114,9 +124,12 @@ button {
     color: var(--basic-black);
 }
 
-/* Search Input */
-
 /* Стилизация placeholder требует перепроверки */
+
+.search-field-sumbit {
+    display: none;
+}
+
 .search-field::placeholder{
     opacity: 0.3;
 }
@@ -129,8 +142,63 @@ button {
     opacity: 1;
 }
 
+.block-user-menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 60px;
+    margin-bottom: 50px;
+}
+
+.search-block {
+    padding-left: 39px;
+    flex-basis: 161px;
+}
+
+.block-menu {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 500px;
+}
+
+.user-menu {
+    padding-left: 25px;
+    flex-basis: 235px;
+}
+
+.product-menu {
+    flex-basis: 217px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-menu a {
+    padding-left: 24px;
+}
+
 .site-navigation {
     list-style: none;
+    margin: 0;
+    padding: 0 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-navigation-catalog {
+    flex-basis: 200px;
+    padding-right: 40px;
+}
+
+.site-navigation-others {
+    flex-basis: 500px;
+    display: flex;
+}
+
+.site-navigation-others-item:first-child {
+    margin-right: 38px;
+}
+
+.site-navigation-others-item:nth-child(2) {
+    margin-right: 111px;
 }
 
 .main-header {
@@ -160,6 +228,10 @@ button {
     text-transform: uppercase;
 }
 
+a.nav-catalog {
+    letter-spacing: 0.1em;
+}
+
 .catalog-menu a {
     font-family: var(--font-open-sans);
     font-weight: 300;
@@ -168,6 +240,9 @@ button {
     text-transform: none;
 }
 
+.catalog-menu {
+    display: none;
+}
 /* INDEX - Slider */
 
 .slider-products {
@@ -250,6 +325,39 @@ button {
 
 /* INDEX - About & Contacts */
 
+.index-columns {
+    display: flex;
+    justify-content: space-between;
+    padding: 86px 0;
+}
+
+.about {
+    flex-basis: 500px;
+}
+
+.about h2 {
+    margin: 0;
+    margin-bottom: 50px;
+}
+
+.about p:nth-of-type(2) {
+    margin-bottom: 60px;
+}
+
+.contacts {
+    flex-basis: 560px;
+}
+
+.contacts h2 {
+    margin: 0;
+    margin-bottom: 47px;
+}
+
+.img-container {
+    display: block;
+    margin-bottom: 85px;
+}
+
 .about h2,
 .contacts h2,
 .service-name {
@@ -263,14 +371,27 @@ button {
 .about p,
 .contacts p {
     line-height: 28px;
+    margin: 0;
+    margin-bottom: 40px;
 }
 
 .delivery-list {
     list-style: none;
+    margin: 0;
+    margin-bottom: 84px;
+    padding-left: 32px;
     font-family: var(--font-gilroy);
     font-weight: 800;
     font-size: 16px;
     line-height: 28px;
+}
+
+.delivery-list li {
+    margin-bottom: 20px;
+}
+
+.delivery-list li:last-child {
+    margin-bottom: 0;
 }
 
 /* FOOTER */
@@ -278,19 +399,51 @@ button {
 .main-footer {
     background-color: var(--basic-dark);
     color: var(--basic-white);
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 65px;
 }
+
+.footer-column1 {
+    flex-basis: 260px;
+    margin-top: 64px;
+}
+
+.footer-column2 {
+    flex-basis: 440px;
+    margin-top: 138px;
+}
+
+.footer-column3 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 46px;
+    flex-basis: 323px;
+}
+
+/*  Не могу грамотно расположить элементы в третьей колонке
+пытался через изменение направления главной оси */
 
 .main-footer a {
     color: var(--basic-white);
 }
 
 .main-footer address {
+    margin-top: 40px;
+    padding-bottom: 87px;
     font-style: normal;
 }
 
 .footer-navigation,
 .socials {
     list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-navigation {
+    display: flex;
+    justify-content: space-between;
 }
 
 .footer-navigation a:hover,
@@ -350,6 +503,7 @@ button {
 }
 
 .user-menu .logout-link {
+    padding-left: 22px;
     color: var(--basic-black);
     opacity: 0.3;
 }
@@ -361,17 +515,29 @@ button {
     font-weight: 800;
     font-size: 47px;
     line-height: 58px;
+    margin-top: 44px;
+    margin-bottom: 30px;
+    grid-column: 1 / -1;
 }
+
+/*  Задал крошкам флекс, вытянул их в строку, дальше хз,
+сделать маргинами, меряя ручками в фигме через рисование прямоугольничка или дать контейнеру ширину и прописать space-between */
 
 .breadcrumbs {
     list-style: none;
+    margin: 0;
+    padding: 0;
     font-size: 14px;
     line-height: 19px;
+    display: flex;
+    margin-bottom: 50px;
+    grid-column: 1 / -1;
 }
 
 .breadcrumbs a {
     color: var(--basic-black);
     opacity: 0.3;
+    margin-right: 40px;
 }
 
 .breadcrumbs a:hover,
@@ -381,6 +547,19 @@ button {
 
 .breadcrumbs a:active {
     opacity: 0.1;
+}
+
+/* CATALOG - Sectioning properties */
+
+.catalog-grid {
+    padding-left: 60px;
+    display: grid;
+    grid-template-columns: 268px 1fr;
+}
+
+.order-list {
+    margin-left: 72px;
+    margin-bottom: 78px;
 }
 
 /* CATALOG - Filters */
@@ -395,6 +574,7 @@ button {
     font-size: 14px;
     line-height: 17px;
     letter-spacing: 0.1em;
+    margin-bottom: 30px;
 }
 
 .filters {
@@ -411,6 +591,8 @@ button {
     line-height: 20px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    margin: 0;
+    padding: 25px 193px 25px 0px;
 }
 
 .form-range__label {
@@ -490,6 +672,10 @@ button {
 
 .sorting-block {
     background-color: var(--basic-light-grey);
+    display: flex;
+    align-items: center;
+    margin-bottom: 70px;
+    width: 760px;
 }
 
 .sorting-block a {
@@ -519,17 +705,37 @@ button {
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.1em;
-    text-transform: uppercase;    
+    text-transform: uppercase;
+    margin: 0;
+    margin-right: 74px;
+    padding: 25px 0;
 }
 
 .sorting-parametres {
+    margin: 0;
+    margin-right: 200px;
+    padding: 0;
+    flex-basis: 300px;
     list-style: none;
     font-weight: 400;
     font-size: 14px;
     line-height: 19px;
 }
 
+.sorting-parametres li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.sorting-parametres li:last-child {
+    margin-right: 0;
+}
+
 .sorting-type {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-basis: 60px;
     list-style: none;
 }
 
@@ -567,9 +773,21 @@ button {
 
 .goods-list {
     list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    column-gap: 40px;
+    grid-template-columns: 360px 360px;
+}
+
+.product-title-price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
 }
 
 .product-title {
+    margin: 0;
     font-family: var(--font-gilroy);
     font-weight: 800;
     font-size: 18px;
@@ -578,6 +796,7 @@ button {
 }
 
 .product-price {
+    margin: 0;
     font-family: var(--font-gilroy);
     font-weight: 300;
     font-size: 16px;
@@ -589,7 +808,13 @@ button {
 /* Page Counter */
 
 .page-counter {
+    margin: 0;
+    margin-top: 40px;
+    width: 700px;
     list-style: none;
+    padding: 25px 30px;  
+    display: flex;
+    justify-content: space-between;
     background-color: var(--counter-background);
 }
 
@@ -600,6 +825,12 @@ button {
     font-size: 16px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+}
+
+.page-number-switcher-block {
+    flex-basis: 85px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .page-number-switcher:not(.page-current) {

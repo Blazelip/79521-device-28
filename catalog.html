@@ -13,27 +13,31 @@
 			<a class="logo" href="index.html" aria-label="Перейти на главную страницу">
 				<img src="img/logo.svg" width="163" height="35" alt="Логотип магазина Device">
 			</a>
-			
-			<form action="https://echo.htmlacademy.ru/" method="GET">
-				<label class="visually-hidden" for="search-field">Поиск по сайту</label>
-				<input class="search-field" type="search" name="search" id="search-field" placeholder="Поиск по сайту">
-				<button type="submit">Найти</button>
-			</form>
 
-			<div class="user-menu">
-				<a class="user-profile" href="#">Валентин Петухов</a>
-				<a class="logout-link" href="#">Выйти</a>
-			</div>
+			<div class="block-user-menu">
+				<form class="search-block" action="https://echo.htmlacademy.ru/" method="GET">
+					<label class="visually-hidden" for="search-field">Поиск по сайту</label>
+					<input class="search-field" type="search" name="search" id="search-field" placeholder="Поиск по сайту">
+					<button class="search-field-sumbit" type="submit">Найти</button>
+				</form>
 
-			<div class="product-menu">
-				<a href="#">Сравнить</a>
-				<a href="#">Корзина</a>
+				<div class="block-menu">
+					<div class="user-menu">
+						<a href="#" class="user-profile">Валентин Петухов</a>
+						<a class="logout-link" href="#">Выйти</a>
+					</div>
+
+					<div class="product-menu">
+						<a href="#">Сравнить</a>
+						<a href="#">Корзина</a>
+					</div>
+				</div>
 			</div>
 
 			<nav class="main-navigation">
 				<ul class="site-navigation">
-					<li>
-						<a href="catalog.html">Каталог товаров</a>
+					<li class="site-navigation-catalog">
+						<a class="nav-catalog" href="catalog.html">Каталог товаров</a>
 						<div class="catalog-menu">
 							<div class="cameras">
 								<a href="#">Виртуальная реальность</a>
@@ -49,20 +53,23 @@
 							</div>
 						</div>
 					</li>
-					<li>
-						<a href="#">Доставка</a>
-					</li>
-					<li>
-						<a href=#>Гарантия</a>
-					</li>
-					<li>
-						<a href="#">Контакты</a>
-					</li>
+
+					<div class="site-navigation-others">
+						<li class="site-navigation-others-item">
+							<a href="#">Доставка</a>
+						</li>
+						<li class="site-navigation-others-item">
+							<a href=#>Гарантия</a>
+						</li>
+						<li class="site-navigation-others-item">
+							<a href="#">Контакты</a>
+						</li>
+					</div>
 				</ul>
 			</nav>
 		</header>
 
-		<main>
+		<main class="catalog-grid">
 			<h1 class="catalog-main-title">Моноподы для селфи</h1>
 
 			<ul class="breadcrumbs">
@@ -76,7 +83,7 @@
 					<a>Моноподы для селфи</a>
 				</li>
 			</ul>
-
+			
 			<section class="filters">
 				<h2>Фильтр</h2>
 
@@ -164,10 +171,10 @@
 
 					<ul class="sorting-type">
 						<li>
-							<a href="#">По возрастанию</a>
+							<a href="#" aria-label="Сортировка по возрастанию">X</a>
 						</li>
 						<li>
-							<a href="#" class="sorting-current">По убыванию</a>
+							<a href="#" class="sorting-current" aria-label="Сортировка по убыванию">Х</a>
 						</li>
 					</ul>
 				</div>
@@ -178,10 +185,12 @@
 							<a href="#">
 								<img src="img/product-1.jpg" alt="Любительская селфи-палка" width="360" height="380">
 							</a>
-
-							<p class="product-title">Любительская селфи-палка</p>
-							<p class="product-price">500 руб.</p>
 							
+							<div class="product-title-price">
+								<p class="product-title">Любительская селфи-палка</p>
+								<p class="product-price">500 руб.</p>
+							</div>
+
 							<div class="product-controls">
 								<a href="#" class="button">В корзину</a>
 								<button class="button-add-comparing" type="button">Добавить к сравнению</button>
@@ -194,8 +203,10 @@
 								<img src="img/product-2.jpg" alt="Профессиональная селфи-палка" width="360" height="380">
 							</a>
 
-							<p class="product-title">Профессиональная селфи-палка</p>
-							<p class="product-price">1 500 руб.</p>
+							<div class="product-title-price">
+								<p class="product-title">Профессиональная селфи-палка</p>
+								<p class="product-price">1 500 руб.</p>
+							</div>
 
 							<div class="product-controls">
 								<a href="#" class="button">В корзину</a>
@@ -209,8 +220,10 @@
 								<img src="img/product-3.jpg" alt="Непотопляемая селфи-палка" width="360" height="380">
 							</a>
 
-							<p class="product-title">Непотопляемая селфи-палка</p>
-							<p class="product-price">2 500 руб.</p>
+							<div class="product-title-price">
+								<p class="product-title">Непотопляемая селфи-палка</p>
+								<p class="product-price">2 500 руб.</p>
+							</div>
 
 							<div class="product-controls">
 								<a href="#" class="button">В корзину</a>
@@ -224,8 +237,10 @@
 								<img src="img/product-4.jpg" alt="Селфи-палка «Следуй за мной»" width="360" height="380">
 							</a>
 
-							<p class="product-title">Селфи-палка «Следуй за мной»</p>
-							<p class="product-price">4 900 руб.</p>
+							<div class="product-title-price">
+								<p class="product-title">Селфи-палка «Следуй за мной»</p>
+								<p class="product-price">4 900 руб.</p>
+							</div>
 
 							<div class="product-controls">
 								<a href="#" class="button">В корзину</a>
@@ -239,15 +254,19 @@
 					<li>
 						<a class="page-text-switcher">Назад</a>
 					</li>
-					<li>
-						<a class="page-number-switcher page-current">1</a>
-					</li>
-					<li>
-						<a class="page-number-switcher" href="#">2</a>
-					</li>
-					<li>
-						<a class="page-number-switcher" href="#">3</a>
-					</li>
+
+					<div class="page-number-switcher-block">
+						<li>
+							<a class="page-number-switcher page-current">1</a>
+						</li>
+						<li>
+							<a class="page-number-switcher" href="#">2</a>
+						</li>
+						<li>
+							<a class="page-number-switcher" href="#">3</a>
+						</li>
+					</div>
+
 					<li>
 						<a class="page-text-switcher" href="#">Вперед</a>
 					</li>

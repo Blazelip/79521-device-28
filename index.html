@@ -14,25 +14,29 @@
 
 			<img src="img/logo.svg" width="163" height="35" alt="Логотип магазина Device">
 			
-			<form action="https://echo.htmlacademy.ru/" method="GET">
-				<label class="visually-hidden" for="search-field">Поиск по сайту</label>
-				<input class="search-field" type="search" name="search" id="search-field" placeholder="Поиск по сайту">
-				<button type="submit">Найти</button>
-			</form>
+			<div class="block-user-menu">
+				<form class="search-block" action="https://echo.htmlacademy.ru/" method="GET">
+					<label class="visually-hidden" for="search-field">Поиск по сайту</label>
+					<input class="search-field" type="search" name="search" id="search-field" placeholder="Поиск по сайту">
+					<button class="search-field-sumbit" type="submit">Найти</button>
+				</form>
 
-			<div class="user-menu">
-				<a class="login-link" href="#">Войти</a>
-			</div>
+				<div class="block-menu">
+					<div class="user-menu">
+						<a class="login-link" href="#">Войти</a>
+					</div>
 
-			<div class="product-menu">
-				<a href="#">Сравнить</a>
-				<a href="#">Корзина</a>
+					<div class="product-menu">
+						<a href="#">Сравнить</a>
+						<a href="#">Корзина</a>
+					</div>
+				</div>
 			</div>
 
 			<nav class="main-navigation">
 				<ul class="site-navigation">
-					<li>
-						<a href="catalog.html">Каталог товаров</a>
+					<li class="site-navigation-catalog">
+						<a class="nav-catalog" href="catalog.html">Каталог товаров</a>
 						<div class="catalog-menu">
 							<div class="cameras">
 								<a href="#">Виртуальная реальность</a>
@@ -48,15 +52,18 @@
 							</div>
 						</div>
 					</li>
-					<li>
-						<a href="#">Доставка</a>
-					</li>
-					<li>
-						<a href=#>Гарантия</a>
-					</li>
-					<li>
-						<a href="#">Контакты</a>
-					</li>
+
+					<div class="site-navigation-others">
+						<li class="site-navigation-others-item">
+							<a href="#">Доставка</a>
+						</li>
+						<li class="site-navigation-others-item">
+							<a href=#>Гарантия</a>
+						</li>
+						<li class="site-navigation-others-item">
+							<a href="#">Контакты</a>
+						</li>
+					</div>
 				</ul>
 			</nav>
 		</header>
@@ -288,7 +295,7 @@
 
 					<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
 					
-					<a href="#">
+					<a class="img-container" href="#">
 						<img src="img/map.png" alt="Адрес - г. Москва, ул. Строителей, 15" width="560" height="222">
 					</a>
 
