@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="css/style.css">	
 	</head>
 	<body>
-		<header class="main-header">
+		<header class="main-header wrapper">
 			<h1 class="visually-hidden">Интернет-магазин гаджетов Device</h1>
 
 			<img src="img/logo.svg" width="163" height="35" alt="Логотип магазина Device">
@@ -69,11 +69,11 @@
 		</header>
 
 		<main>
-			<section class="slider">
+			<section class="slider wrapper">
 				<h2 class="visually-hidden">Популярные товары</h2>
 
 				<ul class="slider-products">
-					<li>
+					<li class="slider-products-item">
 						<a href="#">
 							<img src="img/slider-image1.png" alt="Крутая селфи-палка" width="384" height="486">
 						</a>
@@ -103,7 +103,7 @@
 						</table>
 					</li>
 
-					<li>
+					<li class="slider-products-item">
 						<a href="#">
 							<img src="img/slider-image2.png" alt="Фитнес-браслет" width="345" height="485">
 						</a>
@@ -128,7 +128,7 @@
 						</table>
 					</li>
 
-					<li>
+					<li class="slider-products-item">
 						<a href="#">
 							<img src="img/slider-image3.png" alt="Квадрокоптер" width="526" height="334">
 						</a>
@@ -305,53 +305,57 @@
 		</main>
 		
 		<footer class="main-footer">
-			<div class="footer-column1">
-				<img class="logo" src="img/logo.svg" width="163" height="35" alt="Логотип магазина Device">
-				<address>г. Москва, ул. Строителей, 15</address>
-				<!-- Здесь должна быть желтая линия, скорее всего она будет через CSS -->
-			</div>
-
-			<div class="footer-column2">
-				<ul class="footer-navigation">
-					<li>
-						<a href="#">Доставка</a>
-					</li>
-					<li>
-						<a href="#">Гарантия</a>
-					</li>
-					<li>
-						<a href="#">Контакты</a>
-					</li>
-				</ul>
-
-				<ul class="socials">
-					<li>
-						<a href="#" aria-label="Мы в Фейсбуке"></a>
-					</li>
-					<li>
-						<a href="#" aria-label="Мы в Инстаграме"></a>
-					</li>
-					<li>
-						<a href="#" aria-label="Мы в Твиттере"></a>
-					</li>
-				</ul>
-			</div>
-
-			<div class="footer-column3">
-				<div class="footer-user-menu">
-					<a class="footer-login-link" href="#">Войти</a>
+			<div class="footer-wrapper">
+				<div class="footer-column1">
+					<img class="logo" src="img/logo.svg" width="163" height="35" alt="Логотип магазина Device">
+					<address>г. Москва, ул. Строителей, 15</address>
+					<!-- Здесь должна быть желтая линия, скорее всего она будет через CSS -->
 				</div>
 
-				<div class="footer-product-menu">
-					<a href="#">Сравнить</a>
-					<a href="#">Корзина</a>
+				<div class="footer-column2">
+					<ul class="footer-navigation">
+						<li>
+							<a href="#">Доставка</a>
+						</li>
+						<li>
+							<a href="#">Гарантия</a>
+						</li>
+						<li>
+							<a href="#">Контакты</a>
+						</li>
+					</ul>
+
+					<ul class="socials">
+						<li>
+							<a href="#" aria-label="Мы в Фейсбуке"></a>
+						</li>
+						<li>
+							<a href="#" aria-label="Мы в Инстаграме"></a>
+						</li>
+						<li>
+							<a href="#" aria-label="Мы в Твиттере"></a>
+						</li>
+					</ul>
 				</div>
 
-				<a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
+				<div class="footer-column3">
+					<div class="footer-menu-block">
+						<div class="footer-user-menu">
+							<a class="footer-login-link" href="#">Войти</a>
+						</div>
 
-				<a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss">
-					<img src="img/icon-logo-html.svg" alt="Логотип HTML Academy" width="27" height="34">
-				</a>
+						<div class="footer-product-menu">
+							<a href="#">Сравнить</a>
+							<a href="#">Корзина</a>
+						</div>
+					</div>
+
+					<a class="telephone" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
+
+					<a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss">
+						<img src="img/icon-logo-html.svg" alt="Логотип HTML Academy" width="27" height="34">
+					</a>
+				</div>
 			</div>
 		</footer>
 

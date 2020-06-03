@@ -72,7 +72,6 @@
 body {
     min-width: 1160px;
     margin: 0;
-    padding: 0 40px;
     font-family: var(--font-open-sans);
     font-weight: 300;
     font-style: normal;
@@ -107,6 +106,11 @@ button {
     width: 1px;
     height: 1px;
     margin: -1px;
+}
+
+.wrapper {
+    width: 1040px;
+    margin: 0 auto;
 }
 
 /* INDEX - Site properties */
@@ -145,7 +149,6 @@ button {
 .block-user-menu {
     display: flex;
     justify-content: space-between;
-    padding: 0 60px;
     margin-bottom: 50px;
 }
 
@@ -178,7 +181,7 @@ button {
 .site-navigation {
     list-style: none;
     margin: 0;
-    padding: 0 60px;
+    padding: 0;
     display: flex;
     justify-content: space-between;
 }
@@ -203,6 +206,8 @@ button {
 
 .main-header {
     background-color: var(--special-yellow-light);
+    padding: 44px 60px 164px;
+    position: relative;
 }
 
 .main-header a {
@@ -245,8 +250,18 @@ a.nav-catalog {
 }
 /* INDEX - Slider */
 
+.slider {
+ 
+}
+
 .slider-products {
     list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.slider-products-item:not(:first-child) {
+    display: none;
 }
 
 .product-slogan {
@@ -326,13 +341,15 @@ a.nav-catalog {
 /* INDEX - About & Contacts */
 
 .index-columns {
+    width: 1160px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    padding: 86px 0;
+    padding: 57px 0 86px;
 }
 
 .about {
-    flex-basis: 500px;
+    flex-basis: 473px;
 }
 
 .about h2 {
@@ -350,6 +367,7 @@ a.nav-catalog {
 
 .contacts h2 {
     margin: 0;
+    margin-top: 3px;
     margin-bottom: 47px;
 }
 
@@ -399,26 +417,62 @@ a.nav-catalog {
 .main-footer {
     background-color: var(--basic-dark);
     color: var(--basic-white);
+}
+
+.footer-wrapper {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 65px;
+    width: 1160px;
+    margin: 0 auto;
+    padding: 46px 0 65px;
 }
 
 .footer-column1 {
     flex-basis: 260px;
-    margin-top: 64px;
+}
+
+.footer-column1 img {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 40px;
 }
 
 .footer-column2 {
+    margin-top: 92px;
     flex-basis: 440px;
-    margin-top: 138px;
 }
 
 .footer-column3 {
     display: flex;
     flex-direction: column;
-    margin-top: 46px;
-    flex-basis: 323px;
+}
+
+.footer-menu-block {
+    display: flex;
+    margin-bottom: 73px;
+}
+
+.footer-user-menu {
+    padding-left: 23px;
+    margin-right: 45px;
+}
+
+.telephone {
+    margin-bottom: 67px;
+}
+
+.telephone ,
+.copyright {
+    margin-left: auto;
+}
+
+.footer-product-menu a {
+    display: inline-block;
+    padding-left: 23px;
+}
+
+.footer-product-menu a:first-child {
+    margin-right: 40px;
 }
 
 /*  Не могу грамотно расположить элементы в третьей колонке
@@ -429,7 +483,6 @@ a.nav-catalog {
 }
 
 .main-footer address {
-    margin-top: 40px;
     padding-bottom: 87px;
     font-style: normal;
 }
@@ -517,7 +570,6 @@ a.nav-catalog {
     line-height: 58px;
     margin-top: 44px;
     margin-bottom: 30px;
-    grid-column: 1 / -1;
 }
 
 /*  Задал крошкам флекс, вытянул их в строку, дальше хз,
@@ -525,13 +577,13 @@ a.nav-catalog {
 
 .breadcrumbs {
     list-style: none;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
+    width: 1040px;
     font-size: 14px;
     line-height: 19px;
     display: flex;
     margin-bottom: 50px;
-    grid-column: 1 / -1;
 }
 
 .breadcrumbs a {
@@ -550,16 +602,10 @@ a.nav-catalog {
 }
 
 /* CATALOG - Sectioning properties */
-
-.catalog-grid {
-    padding-left: 60px;
+.main-grid {
     display: grid;
-    grid-template-columns: 268px 1fr;
-}
-
-.order-list {
-    margin-left: 72px;
-    margin-bottom: 78px;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: min-content 1fr min-content;
 }
 
 /* CATALOG - Filters */
@@ -581,6 +627,7 @@ a.nav-catalog {
     background-color: var(--basic-light-grey);
     font-size: 14px;
     line-height: 19px;
+    grid-row: 1 / -1;
 }
 
 .filters h2 {
@@ -674,8 +721,8 @@ a.nav-catalog {
     background-color: var(--basic-light-grey);
     display: flex;
     align-items: center;
+    padding-left: 72px;
     margin-bottom: 70px;
-    width: 760px;
 }
 
 .sorting-block a {
@@ -771,19 +818,31 @@ a.nav-catalog {
 
 /* Goods-list */
 
+.product-item:first-child,
+.product-item:nth-child(2) {
+    margin-bottom: 8px;
+}
+
 .goods-list {
     list-style: none;
     margin: 0;
+    margin-left: 72px;
     padding: 0;
     display: grid;
     column-gap: 40px;
     grid-template-columns: 360px 360px;
+    grid-template-rows: min-content min-content;
+    row-gap: 40px;
+}
+
+.product-image {
+    display: block;
+    margin-bottom: 30px;
 }
 
 .product-title-price {
     display: flex;
     justify-content: space-between;
-    margin-top: 30px;
 }
 
 .product-title {
@@ -810,6 +869,8 @@ a.nav-catalog {
 .page-counter {
     margin: 0;
     margin-top: 40px;
+    margin-bottom: 70px;
+    margin-left: 72px;
     width: 700px;
     list-style: none;
     padding: 25px 30px;  
