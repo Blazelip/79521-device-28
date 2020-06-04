@@ -673,7 +673,6 @@ a.nav-catalog {
     background-color: var(--basic-light-grey);
     font-size: 14px;
     line-height: 19px;
-    align-self: start;
 }
 
 .filters h2 {
