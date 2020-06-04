@@ -111,11 +111,17 @@ button {
 .wrapper {
     width: 1040px;
     margin: 0 auto;
+    padding: 0 60px;
 }
 
 /* INDEX - Site properties */
 
 /* HEADER - */
+
+.logo-header {
+    position: absolute;
+    top: -20px;
+}
 
 /* Search Input */
 
@@ -165,7 +171,7 @@ button {
 
 .user-menu {
     padding-left: 25px;
-    flex-basis: 235px;
+    max-width: 236px;
 }
 
 .product-menu {
@@ -192,22 +198,31 @@ button {
 }
 
 .site-navigation-others {
-    flex-basis: 500px;
+    min-width: 500px;
     display: flex;
+    outline: 5px solid red;
+    outline-offset: -5px;
+}
+
+.site-navigation-others > * {
+    outline: 5px solid green;
+    outline-offset: -5px;
 }
 
 .site-navigation-others-item:first-child {
     margin-right: 38px;
 }
 
-.site-navigation-others-item:nth-child(2) {
-    margin-right: 111px;
+.site-navigation-others-item:last-child {
+    margin-left: auto;
 }
 
 .main-header {
     background-color: var(--special-yellow-light);
-    padding: 44px 60px 164px;
+    padding-top: 44px;
+    padding-bottom: 50px;
     position: relative;
+    margin-top: 40px;
 }
 
 .main-header a {
@@ -250,18 +265,18 @@ a.nav-catalog {
 }
 /* INDEX - Slider */
 
-.slider {
- 
-}
-
 .slider-products {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.slider-products-item:not(:first-child) {
+.slider-products-item {
     display: none;
+}
+
+.slider-active {
+    display: block;
 }
 
 .product-slogan {
@@ -341,7 +356,7 @@ a.nav-catalog {
 /* INDEX - About & Contacts */
 
 .index-columns {
-    width: 1160px;
+    max-width: 1160px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -420,59 +435,73 @@ a.nav-catalog {
 }
 
 .footer-wrapper {
-    display: flex;
-    justify-content: space-between;
-    width: 1160px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1160px;
     margin: 0 auto;
     padding: 46px 0 65px;
 }
 
 .footer-column1 {
-    flex-basis: 260px;
+    width: 260px;
+    justify-self: start;
+    padding: 18px 0 87px;
 }
 
-.footer-column1 img {
+.logo-footer {
     display: block;
-    margin-top: 18px;
     margin-bottom: 40px;
 }
 
 .footer-column2 {
-    margin-top: 92px;
-    flex-basis: 440px;
-}
-
-.footer-column3 {
-    display: flex;
-    flex-direction: column;
-}
-
-.footer-menu-block {
-    display: flex;
-    margin-bottom: 73px;
-}
-
-.footer-user-menu {
-    padding-left: 23px;
-    margin-right: 45px;
-}
-
-.telephone {
+    justify-self: center;
+    padding-top: 92px;
     margin-bottom: 67px;
 }
 
-.telephone ,
-.copyright {
-    margin-left: auto;
+.social-item {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-color: var(--basic-white);
+    border-radius: 50%;
+    opacity: 0.3;
+}
+
+.footer-column3 {
+    justify-self: end;
+    display: grid;
+    grid-template-rows: min-content min-content min-content;
+    text-align: right;
+}
+
+.footer-menu-block {
+    margin-bottom: 73px;
+    display: flex;
+    justify-content: space-between;
+    outline: 3px solid rgba(22, 212, 211, 0.7);
+}
+
+.footer-menu-block > * {
+    outline: 3px solid red;
+    outline-offset: -3px;
+}
+
+.footer-user-menu {
+    max-width: 196px;
+    padding-left: 25px;
+}
+
+.telephone {
+    margin-bottom: 68px;
 }
 
 .footer-product-menu a {
-    display: inline-block;
-    padding-left: 23px;
+
 }
 
 .footer-product-menu a:first-child {
-    margin-right: 40px;
+
 }
 
 /*  Не могу грамотно расположить элементы в третьей колонке
@@ -483,7 +512,6 @@ a.nav-catalog {
 }
 
 .main-footer address {
-    padding-bottom: 87px;
     font-style: normal;
 }
 
@@ -492,11 +520,18 @@ a.nav-catalog {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.socials {
+    width: 136px;
+    margin: 0 auto;
 }
 
 .footer-navigation {
-    display: flex;
-    justify-content: space-between;
+    width: 423px;
+    margin-bottom: 67px;
 }
 
 .footer-navigation a:hover,
@@ -546,12 +581,15 @@ a.nav-catalog {
 
 /* CATALOG - Header */
 
-.logo:hover,
-.logo:focus {
+.logo-header:hover,
+.logo-footer:hover,
+.logo-header:focus,
+.logo-footer:focus {
     opacity: var(--opacity-hover);
 }
 
-.logo:active {
+.logo-header:active,
+.logo-footer:active {
     opacity: var(--opacity-active);
 }
 
@@ -604,7 +642,7 @@ a.nav-catalog {
 /* CATALOG - Sectioning properties */
 .main-grid {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 268px 1fr;
     grid-template-rows: min-content 1fr min-content;
 }
 
@@ -612,22 +650,30 @@ a.nav-catalog {
 
 .filters fieldset {
     border: 0;
+    padding: 0;
+}
+
+.filters fieldset:last-of-type {
+    margin-bottom: 50px;
 }
 
 .filters legend {
+    display: block;
     font-family: var(--font-gilroy);
     font-weight: 800;
     font-size: 14px;
     line-height: 17px;
     letter-spacing: 0.1em;
     margin-bottom: 30px;
+    padding-top: 16px;
+    border-top: 2px solid var(--basic-black);
 }
 
 .filters {
     background-color: var(--basic-light-grey);
     font-size: 14px;
     line-height: 19px;
-    grid-row: 1 / -1;
+    align-self: start;
 }
 
 .filters h2 {
@@ -639,7 +685,13 @@ a.nav-catalog {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     margin: 0;
-    padding: 25px 193px 25px 0px;
+    margin-bottom: 70px;
+    padding: 25px 0;
+}
+
+.filters-form {
+    display: flex;
+    flex-direction: column;
 }
 
 .form-range__label {
@@ -712,6 +764,7 @@ a.nav-catalog {
 
 .button-filter {
     border: 0;
+    padding: 0;
     background-color: transparent;
 }
 
@@ -818,11 +871,6 @@ a.nav-catalog {
 
 /* Goods-list */
 
-.product-item:first-child,
-.product-item:nth-child(2) {
-    margin-bottom: 8px;
-}
-
 .goods-list {
     list-style: none;
     margin: 0;
@@ -851,7 +899,7 @@ a.nav-catalog {
     font-weight: 800;
     font-size: 18px;
     line-height: 22px;
-    letter-spacing: 0.05em; 
+    letter-spacing: 0.05em;
 }
 
 .product-price {
@@ -861,6 +909,8 @@ a.nav-catalog {
     font-size: 16px;
     line-height: 18px;
     letter-spacing: 0.05em;
+    min-width: 100px;
+    text-align: right;
 }
 
 
