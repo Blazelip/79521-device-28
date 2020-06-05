@@ -10,7 +10,7 @@
 	</head>
 	<body>
 		<header class="main-header wrapper">
-			<a class="logo-header" href="index.html" aria-label="Перейти на главную страницу">
+			<a class="logo-header active-logo" href="index.html" aria-label="Перейти на главную страницу">
 				<img src="img/logo.svg" width="163" height="35" alt="Логотип магазина Device">
 			</a>
 
@@ -84,7 +84,7 @@
 				</li>
 			</ul>
 			
-			<div class="main-grid wrapper">
+			<div class="main-grid main-grid-wrapper">
 				<section class="filters">
 					<h2>Фильтр</h2>
 
@@ -140,12 +140,15 @@
 
 						<fieldset>
 							<legend>Bluetooth</legend>
-
-							<input class="radio-input" type="radio" name="bluetooth" value="yes" id="bt-on" checked>
-							<label for="bt-on">Есть</label>
-
-							<input class="radio-input" type="radio" name="bluetooth" value="no" id="bt-off">
-							<label for="bt-off">Нет</label>
+							<p>
+								<input class="radio-input" type="radio" name="bluetooth" value="yes" id="bt-on" checked>
+								<label for="bt-on">Есть</label>
+							</p>
+							
+							<p>
+								<input class="radio-input" type="radio" name="bluetooth" value="no" id="bt-off">
+								<label for="bt-off">Нет</label>
+							</p>
 						</fieldset>
 
 						<button class="button button-filter" type="submit">Показать</button>
@@ -279,7 +282,7 @@
 		<footer class="main-footer">
 			<div class="footer-wrapper">
 				<div class="footer-column1">
-					<img class="logo-footer" src="img/logo.svg" width="163" height="35" alt="Логотип магазина Device">
+					<img class="logo-footer active-logo" src="img/logo.svg" width="163" height="35" alt="Логотип магазина Device">
 					<address>г. Москва, ул. Строителей, 15</address>
 					<!-- Здесь должна быть желтая линия, скорее всего она будет через CSS -->
 				</div>
