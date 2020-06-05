@@ -464,18 +464,16 @@ a.nav-catalog {
 }
 
 .footer-menu-block {
-    min-width: 480px;
     margin-bottom: 73px;
     display: flex;
-    justify-content: space-between;
-    outline: 3px solid rgba(22, 212, 211, 0.7);
-    flex-shrink: 0;
 }
 
 .footer-user-menu {
     min-width: 200px;
     padding-left: 25px;
     margin-right: 39px;
+    flex-shrink: 0;
+    margin-left: -108px;
 }
 
 .user-profile {
@@ -484,6 +482,11 @@ a.nav-catalog {
 
 .telephone {
     margin-bottom: 68px;
+}
+
+.telephone,
+.copyright {
+    justify-self: end;
 }
 
 .footer-product-menu {
