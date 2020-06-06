@@ -166,7 +166,7 @@ button {
 .block-menu {
     display: flex;
     justify-content: space-between;
-    flex-basis: 500px;
+    min-width: 500px;
 }
 
 .user-menu {
@@ -174,14 +174,12 @@ button {
     max-width: 236px;
 }
 
-.product-menu {
-    flex-basis: 217px;
-    display: flex;
-    justify-content: space-between;
-}
-
 .product-menu a {
     padding-left: 24px;
+}
+
+.product-menu a:first-child {
+    margin-right: 41px;
 }
 
 .site-navigation {
@@ -189,25 +187,19 @@ button {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-between;
 }
 
 .site-navigation-catalog {
-    flex-basis: 200px;
     padding-right: 40px;
+    margin-right: 297px;
 }
 
-.site-navigation-others {
-    min-width: 500px;
-    display: flex;
-}
-
-.site-navigation-others-item:first-child {
+.site-navigation-others:nth-of-type(2) {
     margin-right: 38px;
 }
 
-.site-navigation-others-item:last-child {
-    margin-left: auto;
+.site-navigation-others:nth-of-type(3) {
+    margin-right: 111px;
 }
 
 .main-header {
@@ -430,7 +422,8 @@ a.nav-catalog {
 
 .footer-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(12, 60px);
+    column-gap: 40px;
     max-width: 1160px;
     margin: 0 auto;
     padding: 46px 0 65px;
@@ -587,7 +580,6 @@ a.nav-catalog {
 }
 
 .user-menu .logout-link {
-    padding-left: 22px;
     color: var(--basic-black);
     opacity: 0.3;
 }
@@ -635,7 +627,7 @@ a.nav-catalog {
 /* CATALOG - Sectioning properties */
 .main-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 268px 1fr;
     grid-template-rows: min-content 1fr min-content;
 }
 
@@ -920,8 +912,20 @@ a.nav-catalog {
     list-style: none;
     padding: 25px 30px;  
     display: flex;
-    justify-content: space-between;
     background-color: var(--counter-background);
+}
+
+.page-counter li:nth-of-type(2) {
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.page-counter li:nth-of-type(3) {
+    margin-right: 30px;
+}
+
+.page-counter li:nth-of-type(4) {
+    margin-right: auto;
 }
 
 .page-counter a {
@@ -931,12 +935,6 @@ a.nav-catalog {
     font-size: 16px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-}
-
-.page-number-switcher-block {
-    flex-basis: 85px;
-    display: flex;
-    justify-content: space-between;
 }
 
 .page-number-switcher:not(.page-current) {
