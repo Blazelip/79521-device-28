@@ -421,25 +421,33 @@ a.nav-catalog {
 }
 
 .footer-wrapper {
-    display: grid;
-    grid-template-columns: repeat(12, 60px);
-    column-gap: 40px;
     max-width: 1160px;
     margin: 0 auto;
     padding: 46px 0 65px;
 }
 
-.footer-column1 {
-    padding: 18px 0 87px;
+
+.footer-row1 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 39px;
+}
+
+.footer-row2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 67px;
+}
+
+.footer-row3 {
+    display: flex;
+    align-items: center;
 }
 
 .logo-footer {
-    display: block;
-    margin-bottom: 40px;
-}
-
-.footer-column2 {
-    padding-top: 92px;
+    align-self: flex-end;
+    padding-top: 18px;
 }
 
 .social-item {
@@ -451,14 +459,9 @@ a.nav-catalog {
     opacity: 0.3;
 }
 
-.footer-column3 {
-    display: grid;
-    grid-template-rows: min-content min-content min-content;
-}
-
 .footer-menu-block {
-    margin-bottom: 73px;
     display: flex;
+    align-self: flex-start;
 }
 
 .footer-user-menu {
@@ -466,20 +469,10 @@ a.nav-catalog {
     padding-left: 25px;
     margin-right: 39px;
     flex-shrink: 0;
-    margin-left: -108px;
 }
 
 .user-profile {
     margin-right: 24px;
-}
-
-.telephone {
-    margin-bottom: 68px;
-}
-
-.telephone,
-.copyright {
-    justify-self: end;
 }
 
 .footer-product-menu {
@@ -515,12 +508,12 @@ a.nav-catalog {
 
 .socials {
     width: 136px;
-    margin: 0 auto;
+    margin-left: 512px;
+    margin-right: 485px;
 }
 
 .footer-navigation {
     width: 423px;
-    margin-bottom: 67px;
 }
 
 .footer-navigation a:hover,
