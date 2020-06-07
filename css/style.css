@@ -446,7 +446,6 @@ a.nav-catalog {
 }
 
 .logo-footer {
-    align-self: flex-end;
     padding-top: 18px;
 }
 
@@ -465,10 +464,8 @@ a.nav-catalog {
 }
 
 .footer-user-menu {
-    min-width: 200px;
     padding-left: 25px;
     margin-right: 39px;
-    flex-shrink: 0;
 }
 
 .user-profile {
@@ -479,7 +476,6 @@ a.nav-catalog {
     width: 215px;
     display: flex;
     justify-content: space-between;
-    flex-shrink: 0;
 }
 
 .footer-product-menu a {
@@ -593,7 +589,7 @@ a.nav-catalog {
 
 .breadcrumbs {
     list-style: none;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     width: 1040px;
     font-size: 14px;
@@ -624,7 +620,7 @@ a.nav-catalog {
     grid-template-rows: min-content 1fr min-content;
 }
 
-.main-grid-wrapper {
+.main-wrapper {
     max-width: 1100px;
     margin: 0 auto;
     padding-left: 60px;
@@ -902,23 +898,25 @@ a.nav-catalog {
 .page-counter {
     margin: 40px 0 70px 72px;
     width: 700px;
-    list-style: none;
-    padding: 25px 30px;  
-    display: flex;
+    padding: 25px 30px;
     background-color: var(--counter-background);
+    display: flex;
+    justify-content: space-between;
 }
 
-.page-counter li:nth-of-type(2) {
-    margin-left: auto;
+.page-number-switcher {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.page-number-switcher li {
     margin-right: 30px;
 }
 
-.page-counter li:nth-of-type(3) {
-    margin-right: 30px;
-}
-
-.page-counter li:nth-of-type(4) {
-    margin-right: auto;
+.page-number-switcher li:last-child {
+    margin-right: 0;
 }
 
 .page-counter a {
@@ -930,16 +928,16 @@ a.nav-catalog {
     text-transform: uppercase;
 }
 
-.page-number-switcher:not(.page-current) {
+.number-switcher-item:not(.page-current) {
     opacity: 0.3;
 }
 
-.page-number-switcher:hover:not(.page-current),
-.page-number-switcher:focus:not(.page-current) {
+.number-switcher-item:hover:not(.page-current),
+.number-switcher-item:focus:not(.page-current) {
     opacity: 0.6;
 }
 
-.page-number-switcher:active:not(.page-current) {
+.number-switcher-item:active:not(.page-current) {
     opacity: 1;
 }
 
