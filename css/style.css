@@ -98,6 +98,9 @@ button {
     letter-spacing: 0.2em;
     text-transform: uppercase;
     text-align: center;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
 }
 
 .visually-hidden {
@@ -262,23 +265,31 @@ a.nav-catalog {
 
 .slider-products-item {
     display: none;
+    justify-content: space-between;
 }
 
 .slider-active {
     display: flex;
-    justify-content: space-between;
 }
 
 .slider-image {
     flex-basis: 440px;
     text-align: center;
-    padding-top: 17px;
-    padding-bottom: 3px;
 }
 
-.slider-text {
+.slider-info {
     padding-top: 110px;
     flex-basis: 500px;
+}
+
+.slider-number {
+    font-family: var(--font-gilroy);
+    color: var(--basic-white);
+    font-weight: 800;
+    font-size: 13px;
+    line-height: 15px;
+    text-transform: uppercase;
+    background-color: black;
 }
 
 .product-slogan {
@@ -331,7 +342,7 @@ a.nav-catalog {
 .categories {
     padding: 20px 0;
     width: 1160px;
-    margin: 0 auto 49px;
+    margin: 0 auto 64px;
 }
 
 .categories-list {
@@ -348,8 +359,34 @@ a.nav-catalog {
     display: block;
     width: 160px;
     height: 160px;
-    background-color: var(--special-yellow-light);
     margin-bottom: 38px;
+    background-color: var(--special-yellow-light);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.vr-image::before {
+    background-image: url("../img/popular-cat-1.svg");
+}
+
+.monopodes-image::before {
+    background-image: url("../img/popular-cat-2.svg");
+}
+
+.action-cameras-image::before {
+    background-image: url("../img/popular-cat-3.svg"); 
+}
+
+.fitness-trackers-image::before {
+    background-image: url("../img/popular-cat-4.svg"); 
+}
+
+.smart-watches-image::before {
+    background-image: url("../img/popular-cat-5.svg"); 
+}
+
+.drones-image::before {
+    background-image: url("../img/popular-cat-6.svg"); 
 }
 
 .categories-list p {
@@ -375,40 +412,52 @@ a.nav-catalog {
 
 .services {
     margin-bottom: 90px;
+    padding-bottom: 68px;
+    background-color: var(--basic-light-grey);
 }
 
 .services-wrapper {
     width: 1160px;
     margin: 0 auto;
-    padding: 86px 0 135px;
     display: flex;
-    justify-content: space-between;
-    outline: 3px solid #ff1441;
-    outline-offset: -3px;
 }
 
-.services-wrapper > * {
-    outline: 1px solid #155114;
-    outline-style: -1px;
+.services-buttons-container {
+    width: 300px;
 }
 
 .services-list-buttons {
     list-style: none;
     margin: 0;
-    padding: 0;
-    width: 300px;
+    padding: 80px 0 86px;
+    width: 277px;
+    border-right: 7px solid var(--basic-black);
 }
 
-.button-service {
-    border: 0;
-    background-color: transparent;
+.services-list-buttons li:not(.service-current-button) {
+    margin-bottom: 40px;
+}
+
+.services-list-buttons li:last-child {
+    margin-bottom: 0;
+}
+
+.service-current-button {
+    padding: 9px 136px 9px 19px;
+    background-color: var(--basic-black);
+    margin-bottom: 30px;
+}
+
+.service-current-button .button {
+    color: var(--special-yellow-light);
 }
 
 .service-list {
     list-style: none;
-    padding: 0;
+    width: 860px;
+    box-sizing: border-box;
+    padding: 76px 265px 67px 100px;
     margin: 0;
-    width: 760px;
 }
 
 .service-list-item {
@@ -757,12 +806,12 @@ a.nav-catalog {
     margin-bottom: 0;
 }
 
-.bt-check p {
+.bluetooth-check p {
     margin: 0;
     margin-bottom: 16px;
 }
 
-.bt-check p:last-child {
+.bluetooth-check p:last-child {
     margin-bottom: 0;
 }
 

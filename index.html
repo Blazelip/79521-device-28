@@ -75,7 +75,7 @@
 							<img src="img/slider-image1.png" alt="Крутая селфи-палка" width="384" height="486">
 						</a>
 
-						<div class="slider-text">
+						<div class="slider-info">
 							<span class="slider-number">01</span>
 							<p class="product-slogan">
 								Делай селфи,<br>
@@ -106,56 +106,60 @@
 					</li>
 
 					<li class="slider-products-item">
-						<a href="#">
+						<a class="slider-image" href="#">
 							<img src="img/slider-image2.png" alt="Фитнес-браслет" width="345" height="485">
 						</a>
 
-						<span class="slider-number">02</span>
-						<p class="product-slogan">Худеем правильно!</p>
-						<p class="product-description">
-							Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
-						</p>
+						<div class="slider-info">
+							<span class="slider-number">02</span>
+							<p class="product-slogan">Худеем правильно!</p>
+							<p class="product-description">
+								Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
+							</p>
 
-						<a href="#" class="button">Подробнее</a>
+							<a href="#" class="button">Подробнее</a>
 
-						<table class="product-features">
-							<tbody>
-								<tr>
-									<th>48 часов</th>
-								</tr>
-								<tr>
-									<td>Без подзарядки</td>
-								</tr>
-							</tbody>
-						</table>
+							<table class="product-features">
+								<tbody>
+									<tr>
+										<th>48 часов</th>
+									</tr>
+									<tr>
+										<td>Без подзарядки</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</li>
 
 					<li class="slider-products-item">
-						<a href="#">
+						<a class="slider-image" href="#">
 							<img src="img/slider-image3.png" alt="Квадрокоптер" width="526" height="334">
 						</a>
 
-						<span class="slider-number">03</span>
-						<p class="product-slogan">Пархает как бабочка, жалит как пчела!</p>
-						<p class="product-description">
-							Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
+						<div class="slider-info">
+							<span class="slider-number">03</span>
+							<p class="product-slogan">Пархает как бабочка, жалит как пчела!</p>
+							<p class="product-description">
+								Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
 
-						</p>
+							</p>
 
-						<a href="#" class="button">Подробнее</a>
+							<a href="#" class="button">Подробнее</a>
 
-						<table class="product-features">
-							<tbody>
-								<tr>
-									<th>800 м</th>
-									<th>500 м</th>
-								</tr>
-								<tr>
-									<td>Длительность полета</td>
-									<td>Радиус поражения</td>
-								</tr>
-							</tbody>
-						</table>
+							<table class="product-features">
+								<tbody>
+									<tr>
+										<th>800 м</th>
+										<th>500 м</th>
+									</tr>
+									<tr>
+										<td>Длительность полета</td>
+										<td>Радиус поражения</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</li>
 				</ul>
 
@@ -177,32 +181,32 @@
 
 				<ul class="categories-list">
 					<li>
-						<a class="category-item" href="#">
+						<a class="category-item vr-image" href="#">
 							<p>Виртуальная реальность</p>
 						</a>						
 					</li>
 					<li>
-						<a class="category-item" href="#">
+						<a class="category-item monopodes-image" href="#">
 							<p>Моноподы для селфи</p>
 						</a>
 					</li>
 					<li>
-						<a class="category-item" href="#">
+						<a class="category-item action-cameras-image" href="#">
 							<p>Экшн-камеры</p>
 						</a>
 					</li>
 					<li>
-						<a class="category-item" href="#">
+						<a class="category-item fitness-trackers-image" href="#">
 							<p>Фитнес-браслеты</p>
 						</a>
 					</li>
 					<li>
-						<a class="category-item" href="#">
+						<a class="category-item smart-watches-image" href="#">
 							<p>Умные часы</p>
 						</a>
 					</li>
 					<li>
-						<a class="category-item" href="#">
+						<a class="category-item drones-image" href="#">
 							<p>Квадрокоптеры</p>
 						</a>
 					</li>
@@ -213,17 +217,20 @@
 				<h2 class="visually-hidden">Дополнительные услуги</h2>
 
 				<div class="services-wrapper">
-					<ul class="services-list-buttons">
-						<li>
-							<button type="button" class="button button-service">Доставка</button>
-						</li>
-						<li>
-							<button type="button" class="button button-service">Гарантия</button>
-						</li>
-						<li>
-							<button type="button" class="button button-service">Кредит</button>
-						</li>
-					</ul>
+
+					<div class="services-buttons-container">
+						<ul class="services-list-buttons">
+							<li>
+								<button type="button" class="button">Доставка</button>
+							</li>
+							<li class="service-current-button">
+								<button type="button" class="button">Гарантия</button>
+							</li>
+							<li>
+								<button type="button" class="button">Кредит</button>
+							</li>
+						</ul>
+					</div>
 
 					<ul class="service-list">
 						<li class="service-list-item active-service">
