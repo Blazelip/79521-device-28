@@ -434,7 +434,7 @@ a.nav-catalog {
     border-right: 7px solid var(--basic-black);
 }
 
-.services-list-buttons li:not(.service-current-button) {
+.services-list-buttons li {
     margin-bottom: 40px;
 }
 
@@ -443,13 +443,22 @@ a.nav-catalog {
 }
 
 .service-current-button {
-    padding: 9px 136px 9px 19px;
-    background-color: var(--basic-black);
-    margin-bottom: 30px;
+    position: relative;
+    padding: 9px 0px 9px 24px;
+    z-index: 0;
+    color: var(--special-yellow-light);
 }
 
-.service-current-button .button {
-    color: var(--special-yellow-light);
+.service-current-button::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    content: "";
+    width: 277px;
+    height: 40px;
+    background-color: var(--basic-black);
 }
 
 .service-list {
