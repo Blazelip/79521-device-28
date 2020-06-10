@@ -366,27 +366,27 @@ a.nav-catalog {
 }
 
 .vr-image::before {
-    background-image: url("../img/popular-cat-1.svg");
+    background-image: url("../img/vr-category.svg");
 }
 
 .monopodes-image::before {
-    background-image: url("../img/popular-cat-2.svg");
+    background-image: url("../img/monopodes-category.svg");
 }
 
 .action-cameras-image::before {
-    background-image: url("../img/popular-cat-3.svg"); 
+    background-image: url("../img/action-camers-category.svg"); 
 }
 
 .fitness-trackers-image::before {
-    background-image: url("../img/popular-cat-4.svg"); 
+    background-image: url("../img/fitness-trackers-category.svg"); 
 }
 
 .smart-watches-image::before {
-    background-image: url("../img/popular-cat-5.svg"); 
+    background-image: url("../img/smart-watches-category.svg"); 
 }
 
 .drones-image::before {
-    background-image: url("../img/popular-cat-6.svg"); 
+    background-image: url("../img/drones-category.svg"); 
 }
 
 .categories-list p {
