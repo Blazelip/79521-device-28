@@ -98,9 +98,28 @@ button {
     letter-spacing: 0.2em;
     text-transform: uppercase;
     text-align: center;
+    z-index: 1;
+    position: relative;
     padding: 0;
     border: 0;
     background-color: transparent;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 8px;
+    top: 50%;
+    margin-top: -4px;
+    background-color: var(--special-yellow-dark);
+}
+
+.button:hover::before,
+.button:focus::before {
+    height: 40px;
+    margin-top: -20px;
 }
 
 .visually-hidden {
@@ -135,6 +154,7 @@ button {
     opacity: 0.3;
     font-weight: 300;
     color: var(--basic-black);
+
 }
 
 /* Стилизация placeholder требует перепроверки */
@@ -164,6 +184,9 @@ button {
 .search-block {
     padding-left: 39px;
     flex-basis: 161px;
+    background-image: url("../img/search.svg");
+    background-position: 1px 50%;
+    background-repeat: no-repeat;
 }
 
 .block-menu {
@@ -173,16 +196,63 @@ button {
 }
 
 .user-menu {
-    padding-left: 25px;
+    position: relative;
     max-width: 236px;
 }
 
-.product-menu a {
+.login-link {
+    padding-left: 25px;
+    position: relative;
+}
+
+.login-link::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 9px;
+    height: 10px;
+    background-image: url(../img/user.svg);
+    background-repeat: no-repeat;
+    background-size: 9px 10px;
+}
+
+.product-menu > * {
+    outline: 2px solid black;
+}
+
+.compare {
+    position: relative;
+    padding-left: 24px; 
+    margin-right: 41px;
+}
+
+.compare::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 9px;
+    height: 9px;
+    background-image: url(../img/compare.svg);
+    background-repeat: no-repeat;
+    background-size: 9px 9px;
+}
+
+.cart {
+    position: relative;
     padding-left: 24px;
 }
 
-.product-menu a:first-child {
-    margin-right: 41px;
+.cart::before  {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background-image: url(../img/cart.svg);
+    background-repeat: no-repeat;
 }
 
 .site-navigation {
@@ -193,8 +263,25 @@ button {
 }
 
 .site-navigation-catalog {
-    padding-right: 40px;
     margin-right: 297px;
+    position: relative;
+}
+
+.nav-catalog {
+    position: relative;
+    padding-right: 40px;
+}
+
+.nav-catalog::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: 12px;
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/plus.svg");
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
 }
 
 .site-navigation-others:nth-of-type(2) {
@@ -240,7 +327,22 @@ a.nav-catalog {
     letter-spacing: 0.1em;
 }
 
+.catalog-menu {
+    display: none;
+    position: absolute;
+    width: 1040px;
+    left: -60px;
+    padding: 12px 60px 46px 60px;
+    background-color: var(--special-yellow-light);
+}
+
+.site-navigation-catalog:hover .catalog-menu {
+    display: flex;
+}
+
 .catalog-menu a {
+    display: block;
+    margin-bottom: 20px;
     font-family: var(--font-open-sans);
     font-weight: 300;
     font-size: 15px;
@@ -248,9 +350,15 @@ a.nav-catalog {
     text-transform: none;
 }
 
-.catalog-menu {
-    display: none;
+.catalog-menu a:last-child {
+    margin-bottom: 0;
 }
+
+.cameras,
+.watches {
+    margin-right: 61px;
+}
+
 /* INDEX - Slider */
 
 .slider {
@@ -512,12 +620,23 @@ a.nav-catalog {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    padding-top: 57px;
     margin-bottom: 86px;
 }
 
 .about {
     flex-basis: 473px;
+    position: relative;
+    padding-top: 57px;
+}
+
+.about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 7px;
+    background-color: var(--basic-black);
 }
 
 .about h2 {
@@ -531,6 +650,18 @@ a.nav-catalog {
 
 .contacts {
     flex-basis: 560px;
+    padding-top: 57px;
+    position: relative;
+}
+
+.contacts::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 7px;
+    background-color: var(--basic-black);
 }
 
 .contacts h2 {
@@ -609,20 +740,58 @@ a.nav-catalog {
 
 .footer-row3 {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    position: relative;
+}
+
+.footer-row3::before {
+    content: "";
+    position: relative;
+    display: block;
+    width: 80px;
+    height: 7px;
+    background-color: var(--special-yellow-dark);
 }
 
 .logo-footer {
     padding-top: 18px;
 }
 
+.logo-footer path {
+    fill: var(--special-yellow-dark);
+}
+
 .social-item {
     display: block;
     width: 32px;
     height: 32px;
-    background-color: var(--basic-white);
-    border-radius: 50%;
+    background-repeat: no-repeat;
     opacity: 0.3;
+}
+
+.social-item:hover,
+.social-item:focus {
+    opacity: var(--opacity-hover);
+}
+
+.social-item:active {
+    opacity: 0.1;
+}
+
+.social-facebook {
+    background-image: url("../img/fb.svg");
+    background-position: 0 0;
+}
+
+.social-instagram {
+    background-image: url("../img/instagram.svg");
+    background-position: 0 0;
+}
+
+.social-twitter {
+    background-image: url("../img/twitter.svg");
+    background-position: 0 0; 
 }
 
 .footer-menu-block {
@@ -630,13 +799,25 @@ a.nav-catalog {
     align-self: flex-start;
 }
 
+.footer-user-menu .login-link::before {
+    background-image: url("../img/user-yellow.svg")
+}
+
+.footer-product-menu .compare::before {
+    background-image: url("../img/compare-yellow.svg")
+}
+
+.footer-product-menu .cart::before {
+    background-image: url("../img/cart-yellow.svg")
+}
+
 .footer-user-menu {
-    padding-left: 25px;
     margin-right: 39px;
 }
 
 .user-profile {
     margin-right: 24px;
+    padding-left: 25px;
 }
 
 .footer-product-menu {
@@ -644,13 +825,6 @@ a.nav-catalog {
     display: flex;
     justify-content: space-between;
 }
-
-.footer-product-menu a {
-    padding-left: 23px;
-}
-
-/*  Не могу грамотно расположить элементы в третьей колонке
-пытался через изменение направления главной оси */
 
 .main-footer a {
     color: var(--basic-white);
@@ -671,8 +845,6 @@ a.nav-catalog {
 
 .socials {
     width: 136px;
-    margin-left: 512px;
-    margin-right: 485px;
 }
 
 .footer-navigation {
