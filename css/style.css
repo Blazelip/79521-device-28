@@ -348,6 +348,7 @@ a.nav-catalog {
     font-size: 15px;
     line-height: 20px;
     text-transform: none;
+    letter-spacing: normal;
 }
 
 .catalog-menu a:last-child {
