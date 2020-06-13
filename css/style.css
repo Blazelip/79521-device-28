@@ -782,17 +782,14 @@ a.nav-catalog {
 
 .social-facebook {
     background-image: url("../img/fb.svg");
-    background-position: 0 0;
 }
 
 .social-instagram {
     background-image: url("../img/instagram.svg");
-    background-position: 0 0;
 }
 
 .social-twitter {
-    background-image: url("../img/twitter.svg");
-    background-position: 0 0; 
+    background-image: url("../img/twitter.svg"); 
 }
 
 .footer-menu-block {
