@@ -147,20 +147,42 @@ button {
 
 /* Search Input */
 
+.search-block {
+    display: flex;
+}
+
 .search-field {
     border: 0;
+    height: 50px;
     background-color: transparent;
     line-height: 20px;
     opacity: 0.3;
     font-weight: 300;
     color: var(--basic-black);
-
+    /* Не знаю, какой должен быть отступ
+    от инпута и должен ли быть вообще */
 }
 
 /* Стилизация placeholder требует перепроверки */
 
 .search-field-sumbit {
     display: none;
+    padding: 0 17px;
+    line-height: 20px;
+    text-transform: uppercase;
+    font-weight: 300;
+    background-color: transparent;
+    border: 2px solid var(--basic-black);
+}
+
+.search-field-sumbit:hover,
+.search-field-sumbit:focus {
+    background-color: var(--basic-black);
+    color: var(--basic-white);
+}
+
+.search-field-sumbit:active {
+    color: rgba(255, 255, 255, 0.3)
 }
 
 .search-field::placeholder{
@@ -173,6 +195,11 @@ button {
 
 .search-field:focus {
     opacity: 1;
+    border-bottom: 2px solid var(--basic-black);
+}
+
+.search-field:focus + .search-field-sumbit {
+    display: inline-block;
 }
 
 .block-user-menu {
@@ -182,8 +209,8 @@ button {
 }
 
 .search-block {
-    padding-left: 39px;
     flex-basis: 161px;
+    padding-left: 39px;
     background-image: url("../img/search.svg");
     background-position: 1px 50%;
     background-repeat: no-repeat;
