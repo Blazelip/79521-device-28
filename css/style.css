@@ -985,10 +985,18 @@ a.nav-catalog {
     background-color: var(--modals-bacgkround-invalid);
 } */
 
+/*  Map Window */
+
 .map {
-    display: none;
+    display: block;
+    position: absolute;
 }
 
+.close-cross-map {
+    top: 29px;
+    right: 36px;
+    z-index: 1;
+}
 /* CATALOG - Site properties */
 
 /* CATALOG - Header */
