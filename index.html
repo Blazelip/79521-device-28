@@ -48,7 +48,7 @@
 								<a href="#">Умные часы</a>
 							</div>
 							<div class="drones">
-								<a href="#">Квадрокоптеры</a>
+								<a href="#">Квадрокоптер</a>
 							</div>
 						</div>
 					</li>
@@ -86,7 +86,7 @@
 								Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм
 							</p>
 
-							<a href="#" class="button">Подробнее</a>
+							<a href="#" class="button button-slider">Подробнее</a>
 
 							<table class="product-features">
 								<tbody>
@@ -117,7 +117,7 @@
 								Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
 							</p>
 
-							<a href="#" class="button">Подробнее</a>
+							<a href="#" class="button button-slider">Подробнее</a>
 
 							<table class="product-features">
 								<tbody>
@@ -145,7 +145,7 @@
 
 							</p>
 
-							<a href="#" class="button">Подробнее</a>
+							<a href="#" class="button button-slider">Подробнее</a>
 
 							<table class="product-features">
 								<tbody>
@@ -221,13 +221,13 @@
 					<div class="services-buttons-container">
 						<ul class="services-list-buttons">
 							<li>
-								<button type="button" class="button">Доставка</button>
+								<button type="button" class="button button-services service-current-button">Доставка</button>
 							</li>
 							<li>
-								<button type="button" class="button service-current-button">Гарантия</button>
+								<button type="button" class="button button-services">Гарантия</button>
 							</li>
 							<li>
-								<button type="button" class="button">Кредит</button>
+								<button type="button" class="button button-services">Кредит</button>
 							</li>
 						</ul>
 					</div>
@@ -298,7 +298,7 @@
 						<li>ЖелДорЭкспедиция</li>
 					</ul>
 
-					<a href="#" class="button">Подробнее о нас</a>
+					<a href="#" class="button button-info">Подробнее о нас</a>
 				</section>
 
 				<section class="contacts">
@@ -310,7 +310,7 @@
 						<img src="img/map.png" alt="Адрес - г. Москва, ул. Строителей, 15" width="560" height="222">
 					</a>
 
-					<a href="#" class="button">Напишите нам</a>
+					<a href="#" class="button button-info">Напишите нам</a>
 				</section>
 			</div>
 		</main>
@@ -377,29 +377,31 @@
 
 		<section class="feedback">
 			<h3 class="visually-hidden">Форма обратной связи</h3>
-			<form action="https://echo.htmlacademy.ru" method="POST">
-				<p>
-					<label for="name-field">Ваше имя:</label>
-					<input type="text" name="name" id="name-field" placeholder="Имя Фамилия" required>
-				</p>
-				<p>
-					<label for="email-field">Ваш e-mail:</label>
-					<input type="email" name="email" id="email-field" placeholder="email@example.com" required>
-				</p>
+			<form class="feedback-form" action="https://echo.htmlacademy.ru" method="POST">
+				<div class="two-fields-together">
+					<p>
+						<label for="name-field">Ваше имя:</label>
+						<input type="text" name="name" id="name-field" placeholder="Имя Фамилия" required>
+					</p>
+					<p>
+						<label for="email-field">Ваш e-mail:</label>
+						<input type="email" name="email" id="email-field" placeholder="email@example.com" required>
+					</p>
+				</div>
 				<p>
 					<label for="comment-field">Текст письма:</label>
 					<textarea name="comment" id="comment-field" placeholder="В свободной форме" required></textarea>
 				</p>
-				<button class="button" type="submit">Отправить</button>
+				<button class="button button-modal" type="submit">Отправить</button>
 			</form>
 
-			<button class="close-cross" type="button">Закрыть форму</button>
+			<button class="close-cross close-cross-feedback" type="button" aria-label="Закрыть окно"></button>
 		</section>
 
 		<section class="map">
 			<h3 class="visually-hidden">Мы на карте</h3>
 			<img src="img/map-big.png" alt="г. Москва, ул. Строителей, 15" width="994" height="593">
-			<button class="close-cross" type="button">Закрыть карту</button>
+			<button class="close-cross close-cross-map" type="button" aria-label="Закрыть карту"></button>
 		</section>
 	</body>
 </html>
