@@ -165,6 +165,10 @@ button {
     opacity: 0.3;
     font-weight: 300;
     color: var(--basic-black);
+    padding-left: 39px;
+    background-image: url("../img/search.svg");
+    background-position: 1px 50%;
+    background-repeat: no-repeat;
     /* Не знаю, какой должен быть отступ
     от инпута и должен ли быть вообще */
 }
@@ -216,10 +220,8 @@ button {
 
 .search-block {
     flex-basis: 161px;
-    padding-left: 39px;
-    background-image: url("../img/search.svg");
-    background-position: 1px 50%;
-    background-repeat: no-repeat;
+
+
 }
 
 .block-menu {
