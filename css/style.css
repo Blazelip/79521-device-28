@@ -366,6 +366,10 @@ a.nav-catalog {
     margin-bottom: 76px;
 }
 
+.button-slider {
+    min-width: 220px;
+}
+
 .slider-products {
     list-style: none;
     margin: 0;
@@ -525,6 +529,10 @@ a.nav-catalog {
     background-color: var(--basic-light-grey);
 }
 
+.button-services {
+    min-width: 160px;
+}
+
 .services-wrapper {
     width: 1160px;
     margin: 0 auto;
@@ -622,6 +630,10 @@ a.nav-catalog {
     display: flex;
     justify-content: space-between;
     margin-bottom: 86px;
+}
+
+.button-info {
+    min-width: 260px;
 }
 
 .about {
@@ -916,6 +928,10 @@ a.nav-catalog {
     padding: 92px 100px 69px 100px;
     background-color: var(--basic-white);
     box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
+}
+
+.button-modal {
+    min-width: 200px;
 }
 
 .feedback p {
