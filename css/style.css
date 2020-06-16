@@ -997,6 +997,7 @@ a.nav-catalog {
 .feedback textarea {
     box-sizing: border-box;
     border: 0;
+    height: 50px;
     padding: 16px 20px 15px;
     width: 100%;
     background-color: var(--modals-background);
