@@ -255,7 +255,7 @@ button {
     height: 10px;
     background-image: url(../img/user.svg);
     background-repeat: no-repeat;
-    background-size: 9px 10px;
+    background-size: cover;
 }
 
 .compare {
@@ -272,7 +272,7 @@ button {
     height: 9px;
     background-image: url(../img/compare.svg);
     background-repeat: no-repeat;
-    background-size: 9px 9px;
+    background-size: cover;
 }
 
 .cart {
@@ -317,7 +317,7 @@ button {
     height: 16px;
     background-image: url("../img/plus.svg");
     background-repeat: no-repeat;
-    background-size: 16px 16px;
+    background-size: cover;
 }
 
 .site-navigation-others:nth-of-type(2) {
