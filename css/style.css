@@ -866,8 +866,25 @@ a.nav-catalog {
 }
 
 .user-profile {
+    position: relative;
     margin-right: 24px;
     padding-left: 25px;
+}
+
+.user-profile::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 9px;
+    height: 10px;
+    background-image: url(../img/user.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer-user-menu .user-profile::before {
+    background-image: url("../img/user-yellow.svg")
 }
 
 .footer-product-menu {
