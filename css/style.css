@@ -162,14 +162,16 @@ button {
 }
 
 .search-field {
+    box-sizing: border-box;
     border: 0;
     height: 50px;
     background-color: transparent;
     line-height: 20px;
     font-weight: 300;
     color: var(--basic-black);
+    padding: 0;
     padding-left: 39px;
-    width: 351px;
+    width: 356px;
     background-image: url("../img/search.svg");
     background-position: 1px 50%;
     background-repeat: no-repeat;
