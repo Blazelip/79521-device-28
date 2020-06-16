@@ -162,10 +162,10 @@ button {
     height: 50px;
     background-color: transparent;
     line-height: 20px;
-    opacity: 0.3;
     font-weight: 300;
     color: var(--basic-black);
     padding-left: 39px;
+    width: 351px;
     background-image: url("../img/search.svg");
     background-position: 1px 50%;
     background-repeat: no-repeat;
@@ -176,7 +176,7 @@ button {
 /* Стилизация placeholder требует перепроверки */
 
 .search-field-sumbit {
-    display: none;
+    opacity: 0;
     padding: 0 17px;
     line-height: 20px;
     text-transform: uppercase;
@@ -209,7 +209,7 @@ button {
 }
 
 .search-field:focus + .search-field-sumbit {
-    display: inline-block;
+    opacity: 1;
 }
 
 .block-user-menu {
