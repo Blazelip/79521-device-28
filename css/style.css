@@ -1034,10 +1034,6 @@ a.nav-catalog {
     right: 20px;
 }
 
-/* .feedback input:invalid {
-    background-color: var(--modals-bacgkround-invalid);
-} */
-
 /*  Map Window */
 
 .map {
@@ -1259,12 +1255,6 @@ a.nav-catalog {
 
 .radio-input:disabled + label {
     color: var(--disabled-grey);
-}
-
-.button-filter {
-    border: 0;
-    padding: 0;
-    background-color: transparent;
 }
 
 /* CATALOG - Sorting filters */
