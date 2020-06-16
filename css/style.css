@@ -981,7 +981,13 @@ a.nav-catalog {
 /* Feedback window  */
 
 .feedback {
-    position: relative;
+    /* На время отсутствия JS скрыта модалка */
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
     box-sizing: border-box;
     width: 960px;
     padding: 92px 100px 69px 100px;
