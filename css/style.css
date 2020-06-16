@@ -1034,6 +1034,7 @@ a.nav-catalog {
 .feedback textarea {
     height: 171px;
     margin-bottom: 54px;
+    resize: none;
 }
 
 .feedback input::placeholder,
