@@ -1210,6 +1210,7 @@ a.nav-catalog {
 .filters-form {
     display: flex;
     flex-direction: column;
+    width: 200px;
 }
 
 .form-range__label {
