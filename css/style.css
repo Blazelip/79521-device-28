@@ -1278,6 +1278,10 @@ a.nav-catalog {
     color: var(--disabled-grey);
 }
 
+.button-filter {
+    min-width: 200px;
+}
+
 /* CATALOG - Sorting filters */
 
 .sorting-block {
