@@ -1361,11 +1361,24 @@ a.nav-catalog {
 /* Hover block */
 
 .product-controls {
+    position: absolute;
     display: none;
+    box-sizing: border-box;
+    width: 360px;
+    height: 380px;
+    padding: 180px 80px 138px;
+    left: 0;
+    top: 0;
+    justify-content: space-between;
+}
+
+.product-item:hover .product-image {
+    opacity: 0.7;
 }
 
 .product-item:hover .product-controls {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 .button-add-comparing {
@@ -1397,6 +1410,11 @@ a.nav-catalog {
     column-gap: 40px;
     grid-template-columns: 360px 360px;
     row-gap: 40px;
+}
+
+
+.product-item {
+    position: relative;
 }
 
 .product-image {
