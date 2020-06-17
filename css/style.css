@@ -1483,7 +1483,6 @@ a.nav-catalog {
 .page-counter {
     margin: 40px 0 70px 72px;
     width: 700px;
-    padding: 25px 30px;
     background-color: var(--counter-background);
     display: flex;
     justify-content: space-between;
@@ -1494,6 +1493,7 @@ a.nav-catalog {
     margin: 0;
     padding: 0;
     display: flex;
+    align-self: center;
 }
 
 .page-number-switcher li {
@@ -1524,6 +1524,10 @@ a.nav-catalog {
 
 .number-switcher-item:active:not(.page-current) {
     opacity: 1;
+}
+
+.page-text-switcher {
+    padding: 25px 30px;
 }
 
 .page-text-switcher:hover,
