@@ -1400,6 +1400,8 @@ a.nav-catalog {
     left: 0;
     top: 0;
     justify-content: space-between;
+    background-color: transparent;
+    z-index: 3;
 }
 
 .product-item:hover .product-image {
@@ -1450,6 +1452,21 @@ a.nav-catalog {
 .product-image {
     display: block;
     margin-bottom: 30px;
+}
+
+.new-product::before {
+    content: "";
+    position: absolute;
+    right: 27px;
+    top: 29px;
+    z-index: 2;
+
+    display: block;
+    width: 62px;
+    height: 62px;
+    background-color: transparent;
+    background-image: url("../img/new-product.png");
+    background-repeat: no-repeat;
 }
 
 .product-title-price {
