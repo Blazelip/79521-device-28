@@ -1186,6 +1186,7 @@ a.nav-catalog {
 .set-color p {
     margin: 0;
     margin-bottom: 15px;
+    padding-left: 40px;
 }
 
 .set-color p:last-child {
@@ -1195,6 +1196,7 @@ a.nav-catalog {
 .bluetooth-check p {
     margin: 0;
     margin-bottom: 16px;
+    padding-left: 40px;
 }
 
 .bluetooth-check p:last-child {
@@ -1259,7 +1261,53 @@ a.nav-catalog {
     margin: 0; 
 }
 
-.checkbox-input:hover,
+/* Filters - Custom Checkbox */
+
+.checkbox-input {
+    position: absolute;
+    /* -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    /* Отобразил для наглядности */
+}
+
+.checkbox {
+    position: absolute;
+    margin-left: -40px;
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/checkbox-off.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.checkbox-input:checked + .checkbox {
+    background-image: url("../img/checkbox-on.svg");
+}
+
+/* Fo */
+
+.checkbox-input:focus ~ *,
+.checkbox-input:hover ~ * {
+    opacity: var(--opacity-hover);
+}
+
+.checkbox:hover {
+    opacity: var(--opacity-hover);
+}
+
+/* .checkbox-input:checked:focus + .checkbox {
+    opacity: var(--opacity-hover);
+}
+
+.checkbox-input:hover + .checkbox {
+    opacity: var(--opacity-hover);
+} */
+
+/*  Старые стили до стилизации  */
+
+/* .checkbox-input:hover,
 .checkbox-input:focus {
     opacity: 0.6;
 }
@@ -1283,7 +1331,7 @@ a.nav-catalog {
 
 .checkbox-input:disabled + label {
     color: var(--disabled-grey);
-}
+} */
 
 .radio-input:hover,
 .radio-input:focus {
