@@ -1119,18 +1119,41 @@ a.nav-catalog {
     margin-bottom: 50px;
 }
 
-.breadcrumbs a {
+.breadcrumbs-item {
+    position: relative;
     color: var(--basic-black);
     opacity: 0.3;
-    margin-right: 40px;
+    padding-right: 40px;
 }
 
-.breadcrumbs a:hover,
-.breadcrumbs a:focus {
+.breadcrumbs-item::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 4px;
+    height: 7px;
+    background-image: url("../img/nav-arrow.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.breadcrumbs li:nth-child(2) .breadcrumbs-item::after {
+    right: 16px;
+}
+
+.breadcrumbs li:last-child .breadcrumbs-item::after {
+    display: none;
+}
+
+.breadcrumbs-item:hover,
+.breadcrumbs-item:focus {
     opacity: var(--opacity-hover);
 }
 
-.breadcrumbs a:active {
+.breadcrumbs-item:active {
     opacity: 0.1;
 }
 
