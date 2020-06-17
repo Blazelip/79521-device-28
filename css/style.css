@@ -259,7 +259,7 @@ button {
     left: 0;
     width: 9px;
     height: 10px;
-    background-image: url(../img/user.svg);
+    background-image: url("../img/user.svg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -880,7 +880,7 @@ a.nav-catalog {
     left: 0;
     width: 9px;
     height: 10px;
-    background-image: url(../img/user.svg);
+    background-image: url("../img/user.svg");
     background-repeat: no-repeat;
     background-size: cover;
 }
