@@ -1211,7 +1211,6 @@ a.nav-catalog {
 .set-color p {
     margin: 0;
     margin-bottom: 15px;
-    padding-left: 40px;
 }
 
 .set-color p:last-child {
@@ -1221,7 +1220,6 @@ a.nav-catalog {
 .bluetooth-check p {
     margin: 0;
     margin-bottom: 16px;
-    padding-left: 40px;
 }
 
 .bluetooth-check p:last-child {
@@ -1290,16 +1288,27 @@ a.nav-catalog {
 
 .checkbox-input {
     position: absolute;
-    /* -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
-
-    /* Отобразил для наглядности */
+    -webkit-appearance: none;
+    /* width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0); */
 }
 
-.checkbox {
+.checkbox-label {
+    padding-left: 42px;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-label::before {
+    content: "";
     position: absolute;
-    margin-left: -40px;
+    margin-left: -42px;
     width: 24px;
     height: 24px;
     background-image: url("../img/checkbox-off.svg");
@@ -1307,19 +1316,31 @@ a.nav-catalog {
     background-size: cover;
 }
 
-.checkbox-input:checked + .checkbox {
+.checkbox-input:checked + .checkbox-label::before {
     background-image: url("../img/checkbox-on.svg");
 }
 
-/* Fo */
-
-.checkbox-input:focus ~ *,
-.checkbox-input:hover ~ * {
+/* Не совсем понятно, почему фокус не отрабатывает, возможно
+на инпуте теперь нельзя сфокусироваться */
+.checkbox-input:focus .checkbox-label::before {
     opacity: var(--opacity-hover);
 }
 
-.checkbox:hover {
+.checkbox-label:hover::before {
     opacity: var(--opacity-hover);
+}
+
+.checkbox-label:active::before {
+    opacity: 1;
+}
+
+.checkbox-input:disabled + .checkbox-label{
+    color: var(--disabled-grey);
+}
+
+.checkbox-input:disabled + .checkbox-label::before{
+    opacity: 0.25;
+    
 }
 
 /* .checkbox-input:checked:focus + .checkbox {
