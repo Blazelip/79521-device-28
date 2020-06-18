@@ -518,6 +518,23 @@ a.nav-catalog {
     background-position: 50% 50%;
 }
 
+.category-item:hover::before,
+.category-item:focus::before,
+.category-item:active::before {
+    background-color: var(--special-yellow-dark);
+}
+
+/* Согласно стайлгайду, нажатие на каонкретную категорию
+сопровождается прозрачностью для картинки категории, не
+понимаю, как это реализовать, ибо кодом ниже прозрачится
+весь блок, я придумал только менять картинку на прозрачную
+заменяя свойство background-image */
+.vr-image:active::before {
+    opacity: 0.3;
+}
+
+
+
 .vr-image::before {
     background-image: url("../img/vr-category.svg");
 }
@@ -555,11 +572,7 @@ a.nav-catalog {
     color: var(--basic-black);
 }
 
-/*  Проверь пожалуйста тут состояние, чет не отрабатывает
-возможно, он без ховера не активит, но хз*/
-.category-item:active {
-    opacity: var(--opacity-active);
-}
+
 
 /* INDEX - Services */
 
