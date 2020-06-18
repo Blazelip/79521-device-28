@@ -584,10 +584,6 @@ a.nav-catalog {
     background-color: var(--basic-light-grey);
 }
 
-.button-services {
-    min-width: 160px;
-}
-
 .services-wrapper {
     width: 1160px;
     margin: 0 auto;
@@ -614,13 +610,21 @@ a.nav-catalog {
     margin-bottom: 0;
 }
 
+.button-services {
+    min-width: 160px;
+}
+
+.button-services:active {
+    color: var(--special-yellow-light);
+}
+
 .service-current-button {
     position: relative;
-    /* padding: 9px 0px 9px 24px; */
     z-index: 0;
     color: var(--special-yellow-light);
 }
 
+.button-services:active::after,
 .service-current-button::after {
     position: absolute;
     top: -9px;
