@@ -175,11 +175,9 @@ button {
     background-image: url("../img/search.svg");
     background-position: 1px 50%;
     background-repeat: no-repeat;
-    /* Не знаю, какой должен быть отступ
-    от инпута и должен ли быть вообще */
-}
 
-/* Стилизация placeholder требует перепроверки */
+    outline: 0;
+}
 
 .search-field-sumbit {
     opacity: 0;
@@ -1035,6 +1033,8 @@ a.nav-catalog {
     font-weight: normal;
     font-size: 14px;
     line-height: 19px;
+
+    outline: 0;
 }
 
 .feedback textarea {
