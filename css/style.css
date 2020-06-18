@@ -612,6 +612,7 @@ a.nav-catalog {
 
 .button-services {
     min-width: 160px;
+    outline: 0;
 }
 
 .button-services:active {
