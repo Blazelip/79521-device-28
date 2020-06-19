@@ -1532,6 +1532,7 @@ a.nav-catalog {
     list-style: none;
     margin: 0;
     margin-left: 72px;
+    margin-bottom: 40px;
     padding: 0;
     display: grid;
     column-gap: 40px;
@@ -1593,7 +1594,7 @@ a.nav-catalog {
 /* Page Counter */
 
 .page-counter {
-    margin: 40px 0 70px 72px;
+    margin: 0 0 70px 72px;
     width: 760px;
     background-color: var(--counter-background);
     display: flex;
