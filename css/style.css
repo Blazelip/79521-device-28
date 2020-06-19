@@ -1322,8 +1322,9 @@ a.nav-catalog {
 
 /* Не совсем понятно, почему фокус не отрабатывает, возможно
 на инпуте теперь нельзя сфокусироваться */
-.checkbox-input:focus .checkbox-label::before {
+.checkbox-input:focus + .checkbox-label::before {
     opacity: var(--opacity-hover);
+    outline: 2px solid blue;
 }
 
 .checkbox-label:hover::before {
