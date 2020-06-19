@@ -1341,13 +1341,12 @@ a.nav-catalog {
     opacity: 1;
 }
 
-.checkbox-input:disabled + .checkbox-label{
+.checkbox-input:disabled + .checkbox-label {
     color: var(--disabled-grey);
 }
 
-.checkbox-input:disabled + .checkbox-label::before{
+.checkbox-input:disabled + .checkbox-label::before {
     opacity: 0.25;
-    
 }
 
 /* RADIO BUTTONS */
@@ -1392,45 +1391,18 @@ a.nav-catalog {
     opacity: 1;
 }
 
-.radio-input:checked:not(:disabled) + .radio-label:hover::before,
-.radio-input:checked:not(:disabled) + .radio-label:active::before {
-    opacity: var(--opacity-hover);
-}
-
 .radio-input:disabled + .radio-label {
     color: var(--disabled-grey);
 }
 
 .radio-input:disabled + .radio-label::before {
     opacity: 0.25;   
+} 
+
+.radio-input:checked:not(:disabled) + .radio-label:active::before {
+    opacity: var(--opacity-hover);
 }
 
-
-.radio-input:hover,
-.radio-input:focus {
-    opacity: 0.6;
-}
-
-.radio-input:checked:hover,
-.radio-input:checked:focus {
-    opacity: 0.6;
-}
-
-.radio-input:checked:active {
-    opacity: 1;
-}
-
-.radio-input:disabled {
-    opacity: 0.25;
-}
-
-.radio-input:disabled:checked {
-    opacity: 0.25;
-}
-
-.radio-input:disabled + label {
-    color: var(--disabled-grey);
-}
 
 .button-filter {
     min-width: 200px;
