@@ -1326,8 +1326,6 @@ a.nav-catalog {
     background-image: url("../img/checkbox-on.svg");
 }
 
-/* Не совсем понятно, почему фокус не отрабатывает, возможно
-на инпуте теперь нельзя сфокусироваться */
 .checkbox-input:focus + .checkbox-label::before {
     opacity: var(--opacity-hover);
     outline: 2px solid blue;
@@ -1376,8 +1374,6 @@ a.nav-catalog {
     cursor: pointer;
 }
 
-/* Не совсем понятно, почему фокус не отрабатывает, возможно
-на инпуте теперь нельзя сфокусироваться */
 .radio-input:focus + .radio-label::before {
     opacity: var(--opacity-hover);
     outline: 2px solid blue;
