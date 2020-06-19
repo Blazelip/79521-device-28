@@ -191,13 +191,19 @@ button {
     border: 2px solid var(--basic-black);
 }
 
+/* Хотя я прописал opacity и частичка заработала, не могу навести фокус на эту кнопку
+отрабатывает только hover, в макете нет явного описания фокуса,
+но я так понимаю, он должен быть по доступности */
+
 .search-field-sumbit:hover,
 .search-field-sumbit:focus {
+    opacity: 1;
     background-color: var(--basic-black);
     color: var(--basic-white);
 }
 
 .search-field-sumbit:active {
+    opacity: 1;
     color: rgba(255, 255, 255, 0.3)
 }
 
