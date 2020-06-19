@@ -1306,6 +1306,7 @@ a.nav-catalog {
 }
 
 .checkbox-label::before {
+    cursor: pointer;
     content: "";
     position: absolute;
     margin-left: -42px;
