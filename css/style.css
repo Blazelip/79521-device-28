@@ -1319,7 +1319,7 @@ a.nav-catalog {
     background-size: cover;
 }
 
-.checkbox-input:not(:disabled) + .checkbox-label::before {
+.checkbox-input:not(:disabled) + .checkbox-label {
     cursor: pointer;
 }
 
@@ -1372,7 +1372,7 @@ a.nav-catalog {
     background-image: url("../img/radio-on.svg");
 }
 
-.radio-input:not(:disabled) + .radio-label::before {
+.radio-input:not(:disabled) + .radio-label {
     cursor: pointer;
 }
 
