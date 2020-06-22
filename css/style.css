@@ -1302,6 +1302,7 @@ a.nav-catalog {
 }
 
 .checkbox-label {
+    position: relative;
     padding-left: 42px;
     display: flex;
     align-items: center;
@@ -1310,7 +1311,7 @@ a.nav-catalog {
 .checkbox-label::before {
     content: "";
     position: absolute;
-    margin-left: -42px;
+    left: 0;
     width: 24px;
     height: 24px;
     background-image: url("../img/checkbox-off.svg");
@@ -1350,6 +1351,7 @@ a.nav-catalog {
 /* RADIO BUTTONS */
 
 .radio-label {
+    position: relative;
     padding-left: 42px;
     display: flex;
     align-items: center;
@@ -1358,7 +1360,7 @@ a.nav-catalog {
 .radio-label::before {
     content: "";
     position: absolute;
-    margin-left: -42px;
+    left: 0;
     width: 24px;
     height: 24px;
     background-image: url("../img/radio-off.svg");
