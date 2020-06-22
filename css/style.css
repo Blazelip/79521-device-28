@@ -191,10 +191,6 @@ button {
     border: 2px solid var(--basic-black);
 }
 
-/* Хотя я прописал opacity и частичка заработала, не могу навести фокус на эту кнопку
-отрабатывает только hover, в макете нет явного описания фокуса,
-но я так понимаю, он должен быть по доступности */
-
 .search-field-sumbit:hover,
 .search-field-sumbit:focus {
     opacity: 1;
@@ -1327,9 +1323,9 @@ a.nav-catalog {
     background-image: url("../img/checkbox-on.svg");
 }
 
-.checkbox-input:focus + .checkbox-label::before {
+.checkbox-input:focus + .checkbox-label {
     opacity: var(--opacity-hover);
-    outline: 2px solid blue;
+    outline: 2px solid rgb(0, 95, 204);
 }
 
 .checkbox-label:hover::before {
@@ -1376,9 +1372,9 @@ a.nav-catalog {
     cursor: pointer;
 }
 
-.radio-input:focus + .radio-label::before {
+.radio-input:focus + .radio-label {
     opacity: var(--opacity-hover);
-    outline: 2px solid blue;
+    outline: 2px solid rgb(0, 95, 204);
 }
 
 .radio-label:hover::before {
