@@ -1552,9 +1552,20 @@ a.nav-catalog {
 .sorting-type {
     margin: 0;
     padding: 0;
+    padding-left: 11px;
     display: flex;
     flex-basis: 60px;
     list-style: none;
+    box-sizing: border-box;
+}
+
+.sorting-type a {
+    display: block;
+    width: 11px;
+    height: 10px;
+    background-image: url("../img/icon-down-dir.svg");
+    background-repeat: no-repeat;
+    margin-right: 20px;
 }
 
 /* CATALOG - Goods-list */
