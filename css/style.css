@@ -480,7 +480,7 @@ a.nav-catalog {
 
 .product-features {
     margin-top: 60px;
-    border-collapse: collapse;
+    border-spacing: 0 15px;
 }
 
 .product-features th {
