@@ -550,33 +550,32 @@ a.nav-catalog {
     gap: 40px;
 }
 
-.category-item::before {
-    content: "";
-    display: block;
+.category-background {
     width: 160px;
     height: 160px;
     margin-bottom: 38px;
     background-color: var(--special-yellow-light);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
 }
 
-.category-item:hover::before,
-.category-item:focus::before,
-.category-item:active::before {
+.category-background::before {
+    content: "";
+    display: block;
+    width: 160px;
+    height: 160px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.category-item:hover .category-background,
+.category-item:focus .category-background,
+.category-item:active .category-background {
     background-color: var(--special-yellow-dark);
 }
 
-/* Согласно стайлгайду, нажатие на каонкретную категорию
-сопровождается прозрачностью для картинки категории, не
-понимаю, как это реализовать, ибо кодом ниже прозрачится
-весь блок, я придумал только менять картинку на прозрачную
-заменяя свойство background-image */
-.vr-image:active::before {
+.category-item:active .category-background::before {
     opacity: 0.3;
 }
-
-
 
 .vr-image::before {
     background-image: url("../img/vr-category.svg");
@@ -614,8 +613,6 @@ a.nav-catalog {
     line-height: 22px;
     color: var(--basic-black);
 }
-
-
 
 /* INDEX - Services */
 
