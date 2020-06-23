@@ -754,7 +754,18 @@ a.nav-catalog {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
+}
 
+.brand-item {
+    filter: grayscale(100%);
+    opacity: 0.3;
+}
+
+.brand-item:hover,
+.brand-item:focus,
+.brand-item:active {
+    filter: grayscale(0%);
+    opacity: 1;
 }
 
 /* INDEX - About & Contacts */
