@@ -492,6 +492,30 @@ a.nav-catalog {
 
 .slider-switcher {
     list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 72px;
+    justify-content: space-between;
+    line-height: 0;
+    position: absolute;
+    right: 91px;
+    bottom: 123px;
+}
+
+.slider-switcher button {
+    padding: 0;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border: 1px solid var(--basic-black);
+    border-radius: 50%;
+}
+
+.slider-button-current {
+    background-image: url("../img/slider-button-on.svg");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* INDEX - Categories */
