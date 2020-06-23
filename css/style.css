@@ -408,6 +408,7 @@ a.nav-catalog {
 
 .slider {
     margin-bottom: 76px;
+    position: relative;
 }
 
 .button-slider {
@@ -437,14 +438,28 @@ a.nav-catalog {
 .slider-info {
     padding-top: 110px;
     flex-basis: 500px;
+    position: relative;
+}
+
+.slider-info::before {
+    content: "";
+    position: absolute;
+    top: 51px;
+    left: 0;
+    width: 100px;
+    height: 7px;
+    background-color: var(--basic-black);
 }
 
 .slider-number {
+    position: absolute;
+    top: 0;
+    right: 0;
     font-family: var(--font-gilroy);
     color: var(--basic-white);
     font-weight: 800;
-    font-size: 13px;
-    line-height: 15px;
+    font-size: 179px;
+    line-height: 219px;
     text-transform: uppercase;
     background-color: black;
 }
