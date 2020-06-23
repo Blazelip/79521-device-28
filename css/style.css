@@ -680,12 +680,49 @@ a.nav-catalog {
     list-style: none;
     width: 860px;
     box-sizing: border-box;
-    padding: 76px 265px 67px 100px;
+    padding: 76px 0px 67px 100px;
     margin: 0;
 }
 
 .service-list-item {
     display: none;
+    position: relative;
+}
+
+.service-delivery::after {
+    content: "";
+    display: block;
+    width: 136px;
+    height: 164px;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    background-image: url("../img/delivery.svg");
+    background-repeat: no-repeat;
+}
+
+.service-warranty::after {
+    content: "";
+    display: block;
+    width: 171px;
+    height: 195px;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    background-image: url("../img/warranty.svg");
+    background-repeat: no-repeat;
+}
+
+.service-credit::after {
+    content: "";
+    display: block;
+    width: 156px;
+    height: 188px;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    background-image: url("../img/credit.svg");
+    background-repeat: no-repeat;
 }
 
 .active-service {
