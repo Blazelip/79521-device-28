@@ -1536,20 +1536,21 @@ a.nav-catalog {
     line-height: 20px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    flex-basis: 160px;
     margin: 0;
-    margin-right: 74px;
+    margin-right: 40px;
     padding: 25px 0;
 }
 
 .sorting-parametres {
     margin: 0;
-    margin-right: 200px;
+    margin-right: auto;
     padding: 0;
-    flex-basis: 300px;
     list-style: none;
     font-weight: 400;
     font-size: 14px;
     line-height: 19px;
+    flex-basis: 300px;
 }
 
 .sorting-parametres li {
@@ -1577,6 +1578,9 @@ a.nav-catalog {
     height: 10px;
     background-image: url("../img/icon-down-dir.svg");
     background-repeat: no-repeat;
+}
+
+.sorting-type-item:first-child {
     margin-right: 20px;
 }
 
