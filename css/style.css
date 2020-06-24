@@ -424,6 +424,21 @@ a.nav-catalog {
 .slider-products-item {
     display: none;
     justify-content: space-between;
+    position: relative;
+}
+
+.slider-products-item::before {
+    content: attr(data-slide-number);
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: var(--font-gilroy);
+    color: var(--basic-white);
+    font-weight: 800;
+    font-size: 179px;
+    line-height: 219px;
+    text-transform: uppercase;
+    background-color: black;
 }
 
 .slider-active {
@@ -449,19 +464,6 @@ a.nav-catalog {
     width: 100px;
     height: 7px;
     background-color: var(--basic-black);
-}
-
-.slider-number {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-family: var(--font-gilroy);
-    color: var(--basic-white);
-    font-weight: 800;
-    font-size: 179px;
-    line-height: 219px;
-    text-transform: uppercase;
-    background-color: black;
 }
 
 .product-slogan {
