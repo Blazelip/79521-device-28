@@ -692,7 +692,7 @@ a.nav-catalog {
     list-style: none;
     width: 860px;
     box-sizing: border-box;
-    padding: 76px 0px 67px 100px;
+    padding: 76px 0 67px 100px;
     margin: 0;
 }
 
@@ -708,7 +708,7 @@ a.nav-catalog {
     height: 164px;
     position: absolute;
     right: 0;
-    top: 0px;
+    top: 0;
     background-image: url("../img/delivery.svg");
     background-repeat: no-repeat;
 }
@@ -720,7 +720,7 @@ a.nav-catalog {
     height: 195px;
     position: absolute;
     right: 0;
-    top: 0px;
+    top: 0;
     background-image: url("../img/warranty.svg");
     background-repeat: no-repeat;
 }
@@ -732,7 +732,7 @@ a.nav-catalog {
     height: 188px;
     position: absolute;
     right: 0;
-    top: 0px;
+    top: 0;
     background-image: url("../img/credit.svg");
     background-repeat: no-repeat;
 }
