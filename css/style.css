@@ -584,7 +584,8 @@ a.nav-catalog {
     background-color: var(--special-yellow-dark);
 }
 
-.category-item:active .category-background::before {
+.category-item:active .category-background::before,
+.category-item:active p {
     opacity: 0.3;
 }
 
