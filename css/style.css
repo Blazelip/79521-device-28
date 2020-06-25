@@ -1642,6 +1642,7 @@ a.nav-catalog {
 
 .sorting-type-item:first-child {
     margin-right: 20px;
+    transform: rotate(180deg);
 }
 
 /* CATALOG - Goods-list */
