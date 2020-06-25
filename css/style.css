@@ -382,6 +382,7 @@ a.nav-catalog {
 
 .nav-catalog:hover + .catalog-menu {
     display: flex;
+    z-index: 1;
 }
 
 .catalog-menu a {
@@ -409,6 +410,18 @@ a.nav-catalog {
 .slider {
     margin-bottom: 76px;
     position: relative;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 1160px;
+    height: 114px;
+    background-color: var(--special-yellow-light);
 }
 
 .button-slider {
