@@ -1486,6 +1486,7 @@ a.nav-catalog {
     background-color: var(--toogle-grey);
     border-radius: 50%;
     box-shadow: 0px 2px 2px var(--toggle-box-shadow);
+    z-index: 2;
 }
 
 .toggle-max {
@@ -1616,6 +1617,8 @@ a.nav-catalog {
     align-items: center;
     padding-left: 72px;
     margin-bottom: 70px;
+    position: relative;
+}
 
 .sorting-block::after {
     content: "";
