@@ -1458,17 +1458,21 @@ a.nav-catalog {
 .scale {
     height: 2px;
     background-color: var(--basic-black);
-    /* Если дать блоку opacity, как в макете, то он
-    распространится также на вложенный div, что мне не нужно, не знаю
-    как сделать прозрачность баров по макету */
-    /* opacity: 0.2; */
+    opacity: 0.2;
     margin-bottom: 17px;
+    position: relative;
 }
 
-.bar {
+.price-filter-scale::before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
     width: 60%;
     height: 2px;
     background-color: var(--special-green);
+    z-index: 1;
 }
 
 .toggle {
