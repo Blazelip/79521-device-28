@@ -1387,7 +1387,7 @@ a.nav-catalog {
     z-index: -2;
     width: 100vw;
     height: 100%;
-    background-color: var(--basic-light-grey);
+    background-image: linear-gradient(var(--filters-background) 70px, var(--basic-light-grey) 70px);
 }
 
 .filters h2 {
@@ -1402,18 +1402,6 @@ a.nav-catalog {
     margin-bottom: 70px;
     padding: 25px 0;
     position: relative;
-}
-
-.filters h2::before {
-    content: "";
-    position: absolute;
-    display: block;
-    top: 0;
-    right: 0;
-    z-index: -1;
-    width: 100vw;
-    height: 70px;
-    background-color: var(--filters-background);
 }
 
 .filters-form {
