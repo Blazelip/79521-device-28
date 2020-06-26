@@ -86,6 +86,7 @@ body {
     font-size: 15px;
     line-height: 20px;
     color: var(--basic-black);
+    overflow-x: hidden;
 }
 
 a {
@@ -1296,12 +1297,12 @@ a.nav-catalog {
     display: none;
 }
 
-.breadcrumbs-item-link:hover,
-.breadcrumbs-item-link:focus {
+.breadcrumbs-item-link[href]:hover,
+.breadcrumbs-item-link[href]:focus {
     opacity: var(--opacity-hover);
 }
 
-.breadcrumbs-item-link:active {
+.breadcrumbs-item-link[href]:active {
     opacity: 0.1;
 }
 
@@ -1325,6 +1326,10 @@ a.nav-catalog {
     margin: 0;
     margin-bottom: 38px;
     padding: 0;
+}
+
+.filters .set-price {
+    margin-bottom: 33px;
 }
 
 .filters .set-color {
@@ -1435,10 +1440,8 @@ a.nav-catalog {
     background-color: transparent;
     border: none;
     font-weight: 300;
-    /* Здесь на глазок подобрал ширину, не знаю,
-    как убрать поведение инпута по умолчанию получать
-    какую-то ширину */
-    width: 76px;
+    width: 70px;
+    padding: 5px;
 }
 
 .price-filter-input::-webkit-inner-spin-button, 
@@ -1459,7 +1462,7 @@ a.nav-catalog {
     height: 2px;
     background-color: var(--basic-black);
     opacity: 0.2;
-    margin-bottom: 17px;
+    margin-bottom: 12px;
     position: relative;
 }
 
