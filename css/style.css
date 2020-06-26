@@ -879,7 +879,7 @@ a.nav-catalog {
     list-style: none;
     margin: 0;
     margin-bottom: 84px;
-    padding-left: 32px;
+    padding: 0;
     font-family: var(--font-gilroy);
     font-weight: 800;
     font-size: 16px;
@@ -888,6 +888,21 @@ a.nav-catalog {
 
 .delivery-list li {
     margin-bottom: 20px;
+    padding-left: 32px;
+    position: relative;
+}
+
+.delivery-list li::before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 4px;
+    height: 4px;
+    border: 2px solid var(--basic-light-grey);
+    border-radius: 50%;
 }
 
 .delivery-list li:last-child {
