@@ -376,7 +376,7 @@ a.nav-catalog {
     position: absolute;
     width: 1040px;
     left: -60px;
-    padding: 12px 60px 46px 60px;
+    padding: 30px 60px 46px 60px;
     background-color: var(--special-yellow-light);
 }
 
