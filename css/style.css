@@ -378,11 +378,11 @@ a.nav-catalog {
     left: -60px;
     padding: 30px 60px 46px 60px;
     background-color: var(--special-yellow-light);
+    z-index: 1;
 }
 
-.nav-catalog:hover + .catalog-menu {
+.site-navigation-catalog:hover .catalog-menu {
     display: flex;
-    z-index: 1;
 }
 
 .catalog-menu a {
