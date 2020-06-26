@@ -1421,6 +1421,11 @@ a.nav-catalog {
     margin-top: 9px;
 }
 
+.price-filter-fields {
+    display: flex;
+    justify-content: space-between;
+}
+
 .price-filter-label {
     font-family: var(--font-gilroy);
     line-height: 16px;
