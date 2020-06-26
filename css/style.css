@@ -713,40 +713,36 @@ a.nav-catalog {
     position: relative;
 }
 
-.service-delivery::after {
+
+.service-image::after {
+    position: absolute;
     content: "";
     display: block;
+    background-repeat: no-repeat;
+}
+
+.service-image-delivery::after {
     width: 136px;
     height: 164px;
-    position: absolute;
     right: 0;
     top: 0;
     background-image: url("../img/delivery.svg");
-    background-repeat: no-repeat;
 }
 
-.service-warranty::after {
-    content: "";
-    display: block;
+.service-image-warranty::after {
     width: 171px;
     height: 195px;
-    position: absolute;
     right: 0;
     top: 0;
     background-image: url("../img/warranty.svg");
-    background-repeat: no-repeat;
 }
 
-.service-credit::after {
-    content: "";
-    display: block;
+.service-image-credit::after {
     width: 156px;
     height: 188px;
-    position: absolute;
     right: 0;
     top: 0;
     background-image: url("../img/credit.svg");
-    background-repeat: no-repeat;
 }
 
 .active-service {
