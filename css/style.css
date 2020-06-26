@@ -1418,6 +1418,9 @@ a.nav-catalog {
     margin: 0;
 }
 
+.price-filter-input {
+    -moz-appearance: textfield;
+  }
 
 .price-filter-scale {
     position: relative;
