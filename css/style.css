@@ -1698,10 +1698,11 @@ a.nav-catalog {
 
 .sorting-type a {
     display: block;
-    width: 11px;
-    height: 10px;
-    background-image: url("../img/icon-down-dir.svg");
-    background-repeat: no-repeat;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 10px solid var(--basic-black);
 }
 
 .sorting-type-item:first-child {
