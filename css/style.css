@@ -169,24 +169,28 @@ button {
 .search-field {
     box-sizing: border-box;
     border: 0;
-    /* height: 50px; */
+    height: 37px;
     background-color: transparent;
     line-height: 20px;
     font-weight: 300;
     color: var(--basic-black);
     padding: 0;
     padding-left: 39px;
+    padding-bottom: 15px;
     width: 356px;
     background-image: url("../img/search.svg");
-    background-position: 1px 40%;
+    background-position: 1px 4px;
     background-repeat: no-repeat;
 
     outline: 0;
 }
 
 .search-field-sumbit {
+    position: absolute;
+    left: 416px;
+    top: 27px;
     opacity: 0;
-    padding: 0 17px;
+    padding: 15px 17px;
     line-height: 20px;
     text-transform: uppercase;
     font-weight: 300;
@@ -226,7 +230,7 @@ button {
 .block-user-menu {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 46px;
+    margin-bottom: 33px;
 }
 
 .search-block {
@@ -383,7 +387,7 @@ a.nav-catalog {
     position: absolute;
     width: 1040px;
     left: -60px;
-    padding: 30px 60px 46px 60px;
+    padding: 30px 60px 42px 60px;
     background-color: var(--special-yellow-light);
     z-index: 1;
 }
@@ -394,7 +398,7 @@ a.nav-catalog {
 
 .catalog-menu a {
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     font-family: var(--font-open-sans);
     font-weight: 300;
     font-size: 15px;
@@ -409,13 +413,15 @@ a.nav-catalog {
 
 .cameras,
 .watches {
-    margin-right: 61px;
+    margin-right: 63px;
 }
 
 /* INDEX - Slider */
 
 .slider {
     position: relative;
+    min-height: 549px;
+    margin-bottom: 91px;
 }
 
 .slider::before {
@@ -446,17 +452,17 @@ a.nav-catalog {
     position: relative;
 }
 
-.slider-products-item[data-slide-number="01"] {
+/* .slider-products-item[data-slide-number="01"] {
     margin-bottom: 101px;
 }
 
 .slider-products-item[data-slide-number="02"] {
-    margin-bottom: 91px;
+    margin-bottom: 90px;
 }
 
 .slider-products-item[data-slide-number="03"] {
     margin-bottom: 101px;
-}
+} */
 
 .slider-products-item::before {
     content: attr(data-slide-number);
@@ -467,20 +473,18 @@ a.nav-catalog {
     font-size: 179px;
     line-height: 219px;
     text-transform: uppercase;
+    top: 18px;
 }
 
 .slider-products-item[data-slide-number="01"]::before {
-    top: 18px;
     left: 871px;
 }
 
 .slider-products-item[data-slide-number="02"]::before {
-    top: 18px;
     left: 841px;
 }
 
 .slider-products-item[data-slide-number="03"]::before {
-    top: 18px;
     left: 841px;
 }
 
@@ -494,6 +498,7 @@ a.nav-catalog {
 }
 
 .slider-image-1 {
+    padding-left: 1px;
     padding-top: 35px;
 }
 
@@ -586,7 +591,7 @@ a.nav-catalog {
     line-height: 0;
     position: absolute;
     right: 88px;
-    bottom: 152px;
+    bottom: 162px;
 }
 
 .slider-switcher button {
@@ -836,6 +841,7 @@ a.nav-catalog {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
+    column-gap: 40px;
 }
 
 .brand-item {
@@ -843,21 +849,6 @@ a.nav-catalog {
     opacity: 0.3;
 }
 
-.dji {
-    padding-right: 30px;
-}
-
-.spg {
-    padding-right: 6px;
-}
-
-.gopro {
-    padding-left: 24px;
-}
-
-.vive {
-    padding-left: 20px;
-}
 
 .brand-item:hover,
 .brand-item:focus,
@@ -1412,7 +1403,7 @@ a.nav-catalog {
 }
 
 .filters .set-price {
-    margin-bottom: 33px;
+    margin-bottom: 38px;
 }
 
 .filters .set-color {
@@ -1499,7 +1490,6 @@ a.nav-catalog {
 
 .price-filter-fields {
     display: flex;
-    justify-content: space-between;
 }
 
 .price-filter-label {
@@ -1511,8 +1501,8 @@ a.nav-catalog {
     background-color: transparent;
     border: none;
     font-weight: 300;
-    width: 70px;
-    padding: 5px;
+    width: 79px;
+    padding: 0;
 }
 
 .price-filter-input::-webkit-inner-spin-button, 
@@ -1527,6 +1517,7 @@ a.nav-catalog {
 
 .price-filter-scale {
     position: relative;
+    margin-bottom: 17px;
 }
 
 .scale {
@@ -1812,6 +1803,7 @@ a.nav-catalog {
 }
 
 .button-add-comparing {
+    padding: 0;
     font-size: 13px;
     line-height: 18px;
     letter-spacing: 0.1em;
@@ -1840,7 +1832,7 @@ a.nav-catalog {
     display: grid;
     column-gap: 40px;
     grid-template-columns: 360px 360px;
-    row-gap: 40px;
+    row-gap: 48px;
 }
 
 
@@ -1850,7 +1842,7 @@ a.nav-catalog {
 
 .product-image {
     display: block;
-    margin-bottom: 30px;
+    margin-bottom: 26px;
 }
 
 .new-product::before {
@@ -1888,11 +1880,10 @@ a.nav-catalog {
     font-weight: 300;
     font-size: 16px;
     line-height: 18px;
-    letter-spacing: 0.05em;
+    /* letter-spacing: 0.05em; */
     min-width: 100px;
     text-align: right;
 }
-
 
 /* Page Counter */
 
@@ -1908,6 +1899,7 @@ a.nav-catalog {
     list-style: none;
     margin: 0;
     padding: 0;
+    padding-left: 10px;
     display: flex;
     align-self: center;
 }
