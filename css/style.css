@@ -1872,6 +1872,8 @@ a.nav-catalog {
     font-size: 18px;
     line-height: 22px;
     letter-spacing: 0.05em;
+    width: 278px;
+    flex-shrink: 0;
 }
 
 .product-price {
@@ -1879,10 +1881,11 @@ a.nav-catalog {
     font-family: var(--font-gilroy);
     font-weight: 300;
     font-size: 16px;
-    line-height: 18px;
+    line-height: 1.5;
     /* letter-spacing: 0.05em; */
-    min-width: 100px;
+    width: 82px;
     text-align: right;
+    flex-shrink: 0;
 }
 
 /* Page Counter */
