@@ -1765,9 +1765,9 @@ a.nav-catalog {
     display: block;
     width: 0;
     height: 0;
-    border-left: 7px solid transparent;
-    border-right: 7px solid transparent;
-    border-bottom: 10px solid var(--basic-black);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 11px solid var(--basic-black);
 }
 
 .sorting-type-item:first-child {
@@ -1876,6 +1876,7 @@ a.nav-catalog {
     flex-shrink: 0;
 }
 
+
 .product-price {
     margin: 0;
     font-family: var(--font-gilroy);
@@ -1883,9 +1884,20 @@ a.nav-catalog {
     font-size: 16px;
     line-height: 1.5;
     /* letter-spacing: 0.05em; */
-    width: 82px;
-    text-align: right;
+    /* width: 82px; */
+    width: 90px;
+    /* text-align: right; */
+    text-align: center;
     flex-shrink: 0;
+}
+
+.text-left-align {
+    text-align: left;
+    padding-left: 5px;
+}
+
+.product-title-spacing {
+    letter-spacing: 0.06em;
 }
 
 /* Page Counter */
