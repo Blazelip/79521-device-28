@@ -116,6 +116,7 @@ button {
     letter-spacing: 0.2em;
     text-transform: uppercase;
     text-align: center;
+    vertical-align: baseline;
 
     border: 0;
     background-color: transparent;
@@ -1941,6 +1942,8 @@ a.nav-catalog {
     display: inline-block;
 
     margin-right: 27px;
+
+    vertical-align: baseline;
 }
 
 .sorting-parametres li:last-child {
