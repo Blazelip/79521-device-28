@@ -637,7 +637,6 @@ a.nav-catalog {
 .slider-switcher {
     position: absolute;
     right: 88px;
-    /* bottom: 162px; */
     bottom: 29.5%;
 
     display: flex;
@@ -1339,7 +1338,6 @@ a.nav-catalog {
 /* Feedback window  */
 
 .feedback {
-    /* На время отсутствия JS скрыта модалка */
     position: fixed;
     top: 50%;
     left: 50%;
@@ -1451,6 +1449,8 @@ a.nav-catalog {
     top: 0;
     left: 0;
     z-index: 6;
+
+    box-shadow: 0 10px 20px 0 rgba(4, 6, 6, 0.2);
 }
 
 .close-cross-map {
