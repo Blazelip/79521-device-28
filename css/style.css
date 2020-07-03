@@ -1436,10 +1436,17 @@ a.nav-catalog {
     transform: translate(-50%, -50%);
 }
 
+.map-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 6;
+}
+
 .close-cross-map {
     top: 29px;
     right: 36px;
-    z-index: 1;
+    z-index: 7;
 }
 /* CATALOG - Site properties */
 
