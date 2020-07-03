@@ -106,7 +106,7 @@ button {
 
     display: inline-block;
 
-    padding: 0;
+    padding: 9px 0;
 
     font-family: var(--font-gilroy);
     font-weight: 800;
@@ -132,15 +132,15 @@ button {
 
     width: 100%;
     height: 8px;
-    margin-top: -4px;
+
+    transform: translateY(-50%);
 
     background-color: var(--special-yellow-dark);
 }
 
 .button:hover::before,
 .button:focus::before {
-    height: 40px;
-    margin-top: -20px;
+    height: 100%;
 }
 
 .button:active {
@@ -426,7 +426,7 @@ a.nav-catalog {
 .catalog-menu {
     position: absolute;
     left: -60px;
-    z-index: 1;
+    z-index: 2;
 
     display: none;
 
@@ -436,7 +436,8 @@ a.nav-catalog {
     background-color: var(--special-yellow-light);
 }
 
-.site-navigation-catalog:hover .catalog-menu {
+.site-navigation-catalog:hover .catalog-menu,
+.nav-catalog:focus + .catalog-menu {
     display: flex;
 }
 
@@ -457,8 +458,7 @@ a.nav-catalog {
     margin-bottom: 0;
 }
 
-.cameras,
-.watches {
+.catalog-menu > div {
     margin-right: 63px;
 }
 
@@ -489,6 +489,7 @@ a.nav-catalog {
 
 .button-slider {
     min-width: 220px;
+    max-width: 300px;
 }
 
 .slider-products {
@@ -520,7 +521,7 @@ a.nav-catalog {
 }
 
 .slider-products-item[data-slide-number="01"]::before {
-    right: 0;
+    right: -12px;
 }
 
 .slider-products-item[data-slide-number="02"]::before {
@@ -588,11 +589,11 @@ a.nav-catalog {
 
 .product-description {
     margin: 0;
-    margin-bottom: 60px;
+    margin-bottom: 51px;
 }
 
 .product-features {
-    margin-top: 45px;
+    margin-top: 36px;
 
     border-spacing: 0 15px;
 }
@@ -636,7 +637,8 @@ a.nav-catalog {
 .slider-switcher {
     position: absolute;
     right: 88px;
-    bottom: 162px;
+    /* bottom: 162px; */
+    bottom: 29.5%;
 
     display: flex;
     justify-content: space-between;
@@ -780,7 +782,7 @@ a.nav-catalog {
     margin-bottom: 90px;
     padding-bottom: 68px;
 
-    background-image: linear-gradient(var(--basic-white) 26%, var(--basic-light-grey) 26%);
+    background-image: linear-gradient(var(--basic-white) 100px, var(--basic-light-grey) 100px);
 }
 
 .services-wrapper {
@@ -797,14 +799,14 @@ a.nav-catalog {
 .services-list-buttons {
     width: 277px;
     margin: 0;
-    padding: 89px 0 85px;
+    padding: 80px 0 78px;
 
     border-right: 7px solid var(--basic-black);
     list-style: none;
 }
 
 .services-list-buttons li {
-    margin-bottom: 40px;
+    margin-bottom: 21px;
 }
 
 .services-list-buttons li:last-child {
@@ -833,7 +835,7 @@ a.nav-catalog {
     content: "";
 
     position: absolute;
-    top: -9px;
+    top: 0;
     left: 0;
     z-index: -1;
 
@@ -846,19 +848,19 @@ a.nav-catalog {
 }
 
 .service-list {
+    position: relative;
+
     box-sizing: border-box;
 
     width: 860px;
 
     margin: 0;
-    padding: 71px 0 67px 100px;
+    padding: 71px 160px 0 100px;
 
     list-style: none;
 }
 
 .service-list-item {
-    position: relative;
-
     display: none;
 }
 
@@ -875,7 +877,7 @@ a.nav-catalog {
 
 .service-image-delivery::after {
     right: 2px;
-    top: 0;
+    top: 71px;
 
     width: 136px;
     height: 164px;
@@ -885,7 +887,7 @@ a.nav-catalog {
 
 .service-image-warranty::after {
     right: -16px;
-    top: -18px;
+    top: 53px;
 
     width: 171px;
     height: 195px;
@@ -895,7 +897,7 @@ a.nav-catalog {
 
 .service-image-credit::after {
     right: 8px;
-    top: -23px;
+    top: 48px;
     
     width: 156px;
     height: 188px;
@@ -959,11 +961,12 @@ a.nav-catalog {
 
     max-width: 1160px;
     margin: 0 auto;
-    margin-bottom: 86px;
+    margin-bottom: 77px;
 }
 
 .button-info {
     min-width: 260px;
+    max-width: 300px;
 }
 
 .about {
@@ -1018,7 +1021,7 @@ a.nav-catalog {
 .img-container {
     display: block;
 
-    margin-bottom: 81px;
+    margin-bottom: 72px;
 }
 
 .about h2,
@@ -1045,7 +1048,7 @@ a.nav-catalog {
 
 .delivery-list {
     margin: 0;
-    margin-bottom: 77px;
+    margin-bottom: 68px;
     padding: 0;
 
     font-family: var(--font-gilroy);
@@ -1580,7 +1583,7 @@ a.nav-catalog {
 
 
 .filters fieldset:last-of-type {
-    margin-bottom: 53px;
+    margin-bottom: 44px;
 }
 
 .filters legend {
@@ -1912,9 +1915,8 @@ a.nav-catalog {
 }
 
 .sorting-text {
-    flex-basis: 160px;
+    flex-basis: 200px;
     margin: 0;
-    margin-right: 40px;
     padding: 25px 0;
 
     font-family: var(--font-gilroy);
@@ -1926,9 +1928,8 @@ a.nav-catalog {
 }
 
 .sorting-parametres {
-    flex-basis: 300px;
+    flex-basis: 500px;
     margin: 0;
-    margin-right: auto;
     padding: 0;
 
     font-weight: 400;
