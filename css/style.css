@@ -1118,7 +1118,10 @@ a.nav-catalog {
 }
 
 .geo {
-    margin-right: 165px;
+    flex-basis: 260px;
+    margin-right: 108px;
+
+    text-align: left;
 }
 
 .footer-row3 {
@@ -1248,6 +1251,7 @@ a.nav-catalog {
 .footer-navigation,
 .socials { 
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 
     margin: 0;
@@ -1264,6 +1268,12 @@ a.nav-catalog {
 .footer-navigation {
     width: 427px;
     margin-right: auto;
+}
+
+.telephone {
+    flex-basis: 200px;
+
+    text-align: right;
 }
 
 .footer-navigation a:hover,
@@ -2139,8 +2149,10 @@ a.nav-catalog {
 
 .page-number-switcher {
     display: flex;
+    flex-wrap: wrap;
     align-self: center;
 
+    max-width: 400px;
     margin: 0;
     padding: 0;
     padding-left: 10px;
