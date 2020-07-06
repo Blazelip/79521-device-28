@@ -1407,6 +1407,10 @@ a.nav-catalog {
     animation: shake 0.6s;
 }
 
+.invalid-value {
+    background-color: var(--modals-bacgkround-invalid);
+}
+
 .button-modal {
     min-width: 200px;
 }
