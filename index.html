@@ -68,11 +68,11 @@
 		</header>
 
 		<main>
-			<section class="slider wrapper">
+			<section class="slider wrapper js-slider">
 				<h2 class="visually-hidden">Популярные товары</h2>
 
-				<ul class="slider-products">
-					<li class="slider-products-item" data-slide-number="01">
+				<ul class="slider-products js-slider-track">
+					<li class="slider-products-item slider-active" data-slide-number="01">
 						<div class="slider-image slider-image-1" href="#">
 							<img src="img/slider-image1.png" alt="Крутая селфи-палка" width="384" height="486">
 						</div>
@@ -132,7 +132,7 @@
 						</div>
 					</li>
 
-					<li class="slider-products-item slider-active" data-slide-number="03">
+					<li class="slider-products-item" data-slide-number="03">
 						<div class="slider-image slider-image-3" href="#">
 							<img src="img/slider-image3.png" alt="Квадрокоптер" width="526" height="334">
 						</div>
@@ -162,7 +162,7 @@
 					</li>
 				</ul>
 
-				<ul class="slider-switcher">
+				<ul class="slider-switcher js-slider-controls">
 					<li>
 						<button class="slider-button-current" type="button" aria-label="Перейти к первому слайду"></button>
 					</li>
@@ -220,27 +220,27 @@
 				</ul>
 			</section>
 
-			<section class="services">
+			<section class="services js-slider-services">
 				<h2 class="visually-hidden">Дополнительные услуги</h2>
 
 				<div class="services-wrapper">
 
 					<div class="services-buttons-container">
-						<ul class="services-list-buttons">
+						<ul class="services-list-buttons js-slider-controls">
 							<li>
-								<button type="button" class="button button-services">Доставка</button>
+								<button type="button" class="button button-services service-current-button">Доставка</button>
 							</li>
 							<li>
 								<button type="button" class="button button-services">Гарантия</button>
 							</li>
 							<li>
-								<button type="button" class="button button-services service-current-button">Кредит</button>
+								<button type="button" class="button button-services">Кредит</button>
 							</li>
 						</ul>
 					</div>
 
-					<ul class="service-list">
-						<li class="service-list-item service-image service-image-delivery">
+					<ul class="service-list js-slider-track">
+						<li class="service-list-item service-image service-image-delivery active-service">
 							<p class="service-name">Доставка</p>
 							<p class="service-description">
 								Мы с удовольствием доставим ваш товар прямо к вашему<br>
@@ -256,7 +256,7 @@
 								Товар, не дом, конечно же.
 							</p>
 						</li>
-						<li class="service-list-item service-image service-image-credit active-service">
+						<li class="service-list-item service-image service-image-credit">
 							<p class="service-name">Кредит</p>
 							<p class="service-description">
 								Залезть в долговую яму стало проще! Кредитные консультанты<br>
