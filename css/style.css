@@ -1503,6 +1503,7 @@ a.nav-catalog {
     left: 0;
     z-index: 6;
 
+    border: 0;
     box-shadow: 0 10px 20px 0 rgba(4, 6, 6, 0.2);
 }
 
