@@ -1398,12 +1398,12 @@ a.nav-catalog {
     transform: translate(-50%, -50%);
 }
 
-.modal-show {
+.show-feedback {
     display: block;
     animation: bounce 0.6s;
 }
 
-.modal-error {
+.feedback-error {
     animation: shake 0.6s;
 }
 
@@ -1511,6 +1511,11 @@ a.nav-catalog {
     right: 36px;
     z-index: 7;
 }
+
+.show-map {
+    display: block;
+}
+
 /* CATALOG - Site properties */
 
 /* CATALOG - Header */

@@ -1,3 +1,5 @@
+// FEEDBACK
+
 let feedbackLink = document.querySelector(".contacts .button-info");
 let feedback = document.querySelector(".feedback");
 let feedbackForm = feedback.querySelector(".feedback-form");
@@ -19,7 +21,7 @@ try {
 
 feedbackLink.addEventListener("click", function (evt) {
     evt.preventDefault();
-    feedback.classList.add("modal-show");
+    feedback.classList.add("show-feedback");
 
     if (storage) {
         inputEmail.value = storage;
@@ -29,17 +31,17 @@ feedbackLink.addEventListener("click", function (evt) {
 });
 
 closeFeedback.addEventListener("click", function () {
-    feedback.classList.remove("modal-show");
-    feedback.classList.remove("modal-error");
+    feedback.classList.remove("show-feedback");
+    feedback.classList.remove("feedback-error");
 });
 
 feedbackForm.addEventListener("sumbit", function (evt) {
     if (!inputName.value || !inputEmail.value || !inputComment.value) {
     evt.preventDefault();
     // Есть сомнение, что вот этот блок не отрабатывает
-    feedback.classList.remove("modal-error");
+    feedback.classList.remove("feedback-error");
     feedback.offsetWidth = feedback.offsetWidth;
-    feedback.classList.add("modal-error");
+    feedback.classList.add("feedback-error");
     console.log("Здесь работает анимация");
     // 
     } else {
@@ -51,12 +53,26 @@ feedbackForm.addEventListener("sumbit", function (evt) {
 
 window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
-        if (feedback.classList.contains("modal-show")) {
+        if (feedback.classList.contains("show-feedback")) {
           evt.preventDefault();
-          feedback.classList.remove("modal-show");
-          feedback.classList.remove("modal-error");
+          feedback.classList.remove("show-feedback");
+          feedback.classList.remove("feedback-error");
         }
     }
 });
 
+// MAP
 
+let mapLink = document.querySelector(".img-container");
+let map = document.querySelector(".map");
+
+let closeMap = map.querySelector(".close-cross");
+
+mapLink.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    map.classList.add("show-map");
+});
+
+closeMap.addEventListener("click", function () {
+    map.classList.remove("show-map");
+});
