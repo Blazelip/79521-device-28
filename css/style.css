@@ -1313,6 +1313,50 @@ a.nav-catalog {
 
 /* INDEX - PopUp windows */
 
+
+
+/* ANIMATIONS
+ */
+@keyframes bounce {
+    0% {
+      transform: translateY(-2000px);
+    }
+  
+    70% {
+      transform: translateY(30px);
+    }
+  
+    90% {
+      transform: translateY(-10px);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+}
+
+@keyframes shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+  
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: translateX(-10px);
+    }
+  
+    20%,
+    40%,
+    60%,
+    80% {
+      transform: translateX(10px);
+    }
+}
+
 .close-cross {
     position: absolute;
 
@@ -1352,6 +1396,15 @@ a.nav-catalog {
     background-color: var(--basic-white);
     box-shadow: 0px 10px 16px var(--box-shadow);
     transform: translate(-50%, -50%);
+}
+
+.modal-show {
+    display: block;
+    animation: bounce 0.6s;
+}
+
+.modal-error {
+    animation: shake 0.6s;
 }
 
 .button-modal {
