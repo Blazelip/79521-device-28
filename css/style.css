@@ -228,8 +228,24 @@ button {
     opacity: 1;
 }
 
+.search-field::-webkit-input-placeholder{
+    opacity: 0.3;
+}
+
+.search-field::-moz-placeholder{
+    opacity: 0.3;
+}
+
 .search-field::placeholder{
     opacity: 0.3;
+}
+
+.search-field:hover::-webkit-input-placeholder {
+    opacity: var(--opacity-hover);
+}
+
+.search-field:hover::-moz-placeholder {
+    opacity: var(--opacity-hover);
 }
 
 .search-field:hover::placeholder {
@@ -930,7 +946,8 @@ a.nav-catalog {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
-    column-gap: 40px;
+    -moz-column-gap: 40px;
+         column-gap: 40px;
 
     width: 1160px;
     margin: 0 auto;
@@ -941,7 +958,8 @@ a.nav-catalog {
 
 .brand-item {
     opacity: 0.3;
-    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
 }
 
 
@@ -949,7 +967,8 @@ a.nav-catalog {
 .brand-item:focus,
 .brand-item:active {
     opacity: 1;
-    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
 }
 
 /* INDEX - About & Contacts */
@@ -1310,13 +1329,27 @@ a.nav-catalog {
     opacity: var(--opacity-active);
 }
 
-
 /* INDEX - PopUp windows */
-
-
 
 /* ANIMATIONS
  */
+@-webkit-keyframes bounce {
+    0% {
+      transform: translateY(-2000px);
+    }
+  
+    70% {
+      transform: translateY(30px);
+    }
+  
+    90% {
+      transform: translateY(-10px);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+}
 @keyframes bounce {
     0% {
       transform: translateY(-2000px);
@@ -1332,6 +1365,28 @@ a.nav-catalog {
   
     100% {
       transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+  
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: translateX(-10px);
+    }
+  
+    20%,
+    40%,
+    60%,
+    80% {
+      transform: translateX(10px);
     }
 }
 
@@ -1403,11 +1458,13 @@ a.nav-catalog {
 
 .show-feedback {
     display: block;
-    animation: bounce 0.6s;
+    -webkit-animation: bounce 0.6s;
+            animation: bounce 0.6s;
 }
 
 .feedback-error {
-    animation: shake 0.6s;
+    -webkit-animation: shake 0.6s;
+            animation: shake 0.6s;
 }
 
 .button-modal {
@@ -1459,6 +1516,11 @@ a.nav-catalog {
     background-color: var(--modals-background);
 }
 
+.feedback input:invalid:not(:placeholder-shown),
+.feedback textarea:invalid:not(:placeholder-shown) {
+    background-color: var(--modals-bacgkround-invalid);
+}
+
 .feedback .invalid-value {
     background-color: var(--modals-bacgkround-invalid);
 }
@@ -1468,6 +1530,16 @@ a.nav-catalog {
     margin-bottom: 54px;
 
     resize: none;
+}
+
+.feedback input::-webkit-input-placeholder,
+.feedback textarea::-webkit-input-placeholder {
+    opacity: 0.4;
+}
+
+.feedback input::-moz-placeholder,
+.feedback textarea::-moz-placeholder {
+    opacity: 0.4;
 }
 
 .feedback input::placeholder,
@@ -1619,6 +1691,7 @@ a.nav-catalog {
 .main-grid {
     display: grid;
     grid-template-columns: 268px 1fr;
+    grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
     grid-template-rows: min-content 1fr min-content;
 }
 
@@ -1764,7 +1837,7 @@ a.nav-catalog {
 
 .price-filter-input {
     -moz-appearance: textfield;
-  }
+}
 
 .price-filter-scale {
     position: relative;
@@ -1812,6 +1885,8 @@ a.nav-catalog {
     background-color: var(--toogle-grey);
     box-shadow: 0px 2px 2px var(--toggle-box-shadow);
 
+    cursor: -webkit-grab;
+
     cursor: grab;
 }
 
@@ -1827,7 +1902,9 @@ a.nav-catalog {
 .radio-input {
     position: absolute;
 
-    appearance: none;
+    -moz-appearance: none;
+
+         appearance: none;
     -webkit-appearance: none;
 }
 
@@ -2118,7 +2195,8 @@ a.nav-catalog {
 
 .goods-list {
     display: grid;
-    column-gap: 40px;
+    -moz-column-gap: 40px;
+         column-gap: 40px;
     grid-template-columns: 360px 360px;
     row-gap: 48px; 
 
