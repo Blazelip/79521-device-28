@@ -118,7 +118,7 @@ button {
     text-align: center;
     vertical-align: baseline;
 
-    border: 0;
+    border: none;
     background-color: transparent;
 }
 
@@ -189,7 +189,7 @@ button {
     font-weight: 300;
     color: var(--basic-black);
 
-    border: 0;
+    border: none;
     background-color: transparent;
     background-image: url("../img/search.svg");
     background-position: 1px 4px;
@@ -1363,7 +1363,7 @@ a.nav-catalog {
     width: 55px;
     height: 55px;
 
-    border: 0;
+    border: none;
     background-color: transparent;
     background-image: url("../img/modal-close.svg");
     bacgkround-repeat: no-repeat;
@@ -1458,7 +1458,7 @@ a.nav-catalog {
     font-size: 14px;
     line-height: 19px;
 
-    border: 0;
+    border: none;
     outline: 0;
     background-color: var(--modals-background);
 }
@@ -1510,7 +1510,7 @@ a.nav-catalog {
     left: 0;
     z-index: 6;
 
-    border: 0;
+    border: none;
     box-shadow: 0 10px 20px 0 rgba(4, 6, 6, 0.2);
 }
 
@@ -1635,7 +1635,7 @@ a.nav-catalog {
     margin-bottom: 38px;
     padding: 0;
 
-    border: 0;
+    border: none;
 }
 
 .filters .set-price {
