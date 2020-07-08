@@ -1561,7 +1561,7 @@ a.nav-catalog {
 
 .feedback input:focus,
 .feedback textarea:focus {
-    border: 2px solid #F7E296;
+    border: 2px solid var(--special-yellow-light);
     background-color: transparent;
 }
 
@@ -1887,7 +1887,7 @@ a.nav-catalog {
     width: 4px;
     height: 4px;
 
-    border: 8px solid #ffffff;
+    border: 8px solid var(--basic-white);
     border-radius: 50%;
     background-color: var(--toogle-grey);
     box-shadow: 0px 2px 2px var(--toggle-box-shadow);
