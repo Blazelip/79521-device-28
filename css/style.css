@@ -225,6 +225,7 @@ button {
 .search-field-sumbit:focus {
     color: var(--basic-white);
 
+    outline: 0;
     background-color: var(--basic-black);
     opacity: 1;
 }
@@ -232,6 +233,7 @@ button {
 .search-field-sumbit:active {
     color: rgba(255, 255, 255, 0.3);
 
+    outline: 0;
     opacity: 1;
 }
 
@@ -2244,6 +2246,10 @@ a.nav-catalog {
 .product-title-price {
     display: flex;
     justify-content: space-between;
+}
+
+.product-title-price >  a {
+    color: var(--basic-black);
 }
 
 .product-title {
