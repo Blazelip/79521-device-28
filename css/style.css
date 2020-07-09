@@ -68,7 +68,10 @@
     --opacity-active: 0.3;
 
     --box-shadow: rgba(0, 0, 0, 0.15);
+    --box-shadow-frame: rgba(4, 6, 6, 0.2);
     --toggle-box-shadow: rgba(0, 0, 0, 0.18);
+
+    --custom-checkbox-outline: rgb(0, 95, 204);
 
     --font-gilroy: "Gilroy", "Arial", sans-serif;
     --font-open-sans: "Open Sans", "Arial", sans-serif;
@@ -233,7 +236,6 @@ button {
 .search-field-sumbit:active {
     color: rgba(255, 255, 255, 0.3);
 
-    outline: 0;
     opacity: 1;
 }
 
@@ -1592,7 +1594,7 @@ a.nav-catalog {
     z-index: 6;
 
     border: none;
-    box-shadow: 0 10px 20px 0 rgba(4, 6, 6, 0.2);
+    box-shadow: 0 10px 20px 0 var(--box-shadow-frame);
 }
 
 .close-cross-map {
@@ -1948,7 +1950,7 @@ a.nav-catalog {
 }
 
 .checkbox-input:focus + .checkbox-label {
-    outline: 2px solid rgb(0, 95, 204);
+    outline: 2px solid var(--custom-checkbox-outline);
     opacity: var(--opacity-hover);
 }
 
@@ -2002,7 +2004,7 @@ a.nav-catalog {
 }
 
 .radio-input:focus + .radio-label {
-    outline: 2px solid rgb(0, 95, 204);
+    outline: 2px solid var(--custom-checkbox-outline);
     opacity: var(--opacity-hover);
 }
 
