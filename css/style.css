@@ -72,6 +72,8 @@
     --toggle-box-shadow: rgba(0, 0, 0, 0.18);
 
     --custom-checkbox-outline: rgb(0, 95, 204);
+    --button-color-active: rgba(0, 0, 0, 0.3);
+    --search-button-active: rgba(255, 255, 255, 0.3);
 
     --font-gilroy: "Gilroy", "Arial", sans-serif;
     --font-open-sans: "Open Sans", "Arial", sans-serif;
@@ -146,7 +148,7 @@ button {
 }
 
 .button:active {
-    color: rgba(0, 0, 0, 0.3);
+    color: var(--button-color-active);
 }
 
 .visually-hidden {
@@ -234,7 +236,7 @@ button {
 }
 
 .search-field-sumbit:active {
-    color: rgba(255, 255, 255, 0.3);
+    color: var(--search-button-active);
 
     opacity: 1;
 }
